@@ -1,0 +1,17 @@
+<!-- Product Grid Component -->
+<!-- Usage: {% include 'components/product-grid.html' with products=products_list %} -->
+<div class="products-grid">
+    {% for product in products %}
+        <article class="product-card">
+            <div class="product-image">
+                <img src="{{ product.image }}" alt="{{ product.name }}">
+            </div>
+            <div class="product-info">
+                <h3>{{ product.name }}</h3>
+                <p class="product-price">${{ product.price }}</p>
+                <a href="product-detail.html?id={{ product.id }}" class="btn btn-secondary" style="display: block; margin-bottom: var(--spacing-sm);">View Details</a>
+                <button class="btn btn-primary" style="width: 100%;">Add to Cart</button>
+            </div>
+        </article>
+    {% endfor %}
+</div>

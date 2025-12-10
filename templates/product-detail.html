@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ward-robe | Product Details</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/variables.css">
+    <link rel="stylesheet" href="../static/css/components/navigation.css">
+    <link rel="stylesheet" href="../static/css/components/footer.css">
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html">Ward-robe</a>
+            </div>
+            <nav class="navbar-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <section class="product-detail">
+            <div class="product-detail-container">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="#" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="#" alt="Thumbnail 1">
+                        <img src="#" alt="Thumbnail 2">
+                        <img src="#" alt="Thumbnail 3">
+                        <img src="#" alt="Thumbnail 4">
+                    </div>
+                </div>
+
+                <div class="product-details">
+                    <h1>Premium Clothing Item</h1>
+                    
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="review-count">(128 reviews)</span>
+                    </div>
+
+                    <div class="product-price-section">
+                        <span class="price">$99.99</span>
+                        <span class="original-price">$149.99</span>
+                        <span class="discount">-33%</span>
+                    </div>
+
+                    <div class="product-description">
+                        <h3>Description</h3>
+                        <p>This premium clothing item is made from high-quality materials. Perfect for everyday wear or special occasions. The craftsmanship and attention to detail make this a must-have piece in your wardrobe.</p>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label for="size">Size:</label>
+                            <select id="size" class="select-input">
+                                <option value="">Select a size</option>
+                                <option value="xs">Extra Small</option>
+                                <option value="s">Small</option>
+                                <option value="m">Medium</option>
+                                <option value="l">Large</option>
+                                <option value="xl">Extra Large</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="color">Color:</label>
+                            <select id="color" class="select-input">
+                                <option value="">Select a color</option>
+                                <option value="black">Black</option>
+                                <option value="white">White</option>
+                                <option value="blue">Blue</option>
+                                <option value="red">Red</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="quantity">Quantity:</label>
+                            <div class="quantity-selector">
+                                <button class="qty-btn" aria-label="Decrease quantity">−</button>
+                                <input type="number" id="quantity" class="qty-input" value="1" min="1">
+                                <button class="qty-btn" aria-label="Increase quantity">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn btn-primary" style="flex: 1;">Add to Cart</button>
+                        <button class="btn btn-secondary" style="flex: 1;">Add to Wishlist</button>
+                    </div>
+
+                    <div class="product-info-additional">
+                        <div class="info-item">
+                            <span class="info-label">SKU:</span>
+                            <span class="info-value">PROD-12345</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Stock:</span>
+                            <span class="info-value">In Stock</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Shipping:</span>
+                            <span class="info-value">Free worldwide shipping</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="details">Details</button>
+                    <button class="tab-btn" data-tab="shipping">Shipping</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews</button>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="details">
+                        <h3>Product Details</h3>
+                        <ul>
+                            <li>Material: 100% Premium Fabric</li>
+                            <li>Weight: 250g</li>
+                            <li>Care: Machine wash at 30°C</li>
+                            <li>Made in: Designed in USA, Made in Vietnam</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane" id="shipping">
+                        <h3>Shipping Information</h3>
+                        <p>We offer free worldwide shipping on all orders over $50. Orders typically ship within 2-3 business days.</p>
+                        <p>Estimated delivery times:</p>
+                        <ul>
+                            <li>US & Canada: 5-7 business days</li>
+                            <li>Europe: 7-10 business days</li>
+                            <li>International: 10-14 business days</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane" id="reviews">
+                        <h3>Customer Reviews</h3>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <span class="review-author">John Doe</span>
+                                <span class="review-rating">★★★★★</span>
+                            </div>
+                            <p>"Great quality and fits perfectly! Would definitely recommend."</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <span class="review-author">Jane Smith</span>
+                                <span class="review-rating">★★★★☆</span>
+                            </div>
+                            <p>"Nice product, arrived quickly. Slightly different shade than expected."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Products -->
+        <section class="related-products">
+            <h2>You might also like</h2>
+            <div class="products-grid">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="#" alt="Related Product 1">
+                    </div>
+                    <div class="product-info">
+                        <h3>Related Product 1</h3>
+                        <p class="product-price">$79.99</p>
+                        <button class="btn btn-secondary">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="#" alt="Related Product 2">
+                    </div>
+                    <div class="product-info">
+                        <h3>Related Product 2</h3>
+                        <p class="product-price">$89.99</p>
+                        <button class="btn btn-secondary">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="#" alt="Related Product 3">
+                    </div>
+                    <div class="product-info">
+                        <h3>Related Product 3</h3>
+                        <p class="product-price">$69.99</p>
+                        <button class="btn btn-secondary">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="#" alt="Related Product 4">
+                    </div>
+                    <div class="product-info">
+                        <h3>Related Product 4</h3>
+                        <p class="product-price">$99.99</p>
+                        <button class="btn btn-secondary">Add to Cart</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ward-robe. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
