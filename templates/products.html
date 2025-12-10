@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ward-robe | Shop</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/variables.css">
+    <link rel="stylesheet" href="../static/css/components/navigation.css">
+    <link rel="stylesheet" href="../static/css/components/footer.css">
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html">Ward-robe</a>
+            </div>
+            <nav class="navbar-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <section class="products-header">
+            <h1>Our Products</h1>
+            <p>Browse our collection of premium clothing</p>
+        </section>
+
+        <section class="products-section">
+            <aside class="filters-sidebar">
+                <h3>Filters</h3>
+                
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category">
+                        <span>T-Shirts</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category">
+                        <span>Pants</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category">
+                        <span>Jackets</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="category">
+                        <span>Shoes</span>
+                    </label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Size</h4>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="size">
+                        <span>XS</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="size">
+                        <span>S</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="size">
+                        <span>M</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="size">
+                        <span>L</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="size">
+                        <span>XL</span>
+                    </label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <input type="range" min="0" max="500" class="price-slider">
+                    <div class="price-display">
+                        <span>$0</span> - <span>$500</span>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" style="width: 100%; margin-top: var(--spacing-lg);">Apply Filters</button>
+            </aside>
+
+            <div class="products-container">
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="#" alt="T-Shirt">
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic T-Shirt</h3>
+                            <p class="product-price">$29.99</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="display: block; margin-bottom: var(--spacing-sm);">View Details</a>
+                            <button class="btn btn-primary" style="width: 100%;">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="#" alt="Jeans">
+                        </div>
+                        <div class="product-info">
+                            <h3>Blue Jeans</h3>
+                            <p class="product-price">$59.99</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="display: block; margin-bottom: var(--spacing-sm);">View Details</a>
+                            <button class="btn btn-primary" style="width: 100%;">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="#" alt="Jacket">
+                        </div>
+                        <div class="product-info">
+                            <h3>Leather Jacket</h3>
+                            <p class="product-price">$149.99</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="display: block; margin-bottom: var(--spacing-sm);">View Details</a>
+                            <button class="btn btn-primary" style="width: 100%;">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="#" alt="Sneakers">
+                        </div>
+                        <div class="product-info">
+                            <h3>Running Sneakers</h3>
+                            <p class="product-price">$89.99</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="display: block; margin-bottom: var(--spacing-sm);">View Details</a>
+                            <button class="btn btn-primary" style="width: 100%;">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="#" alt="Dress">
+                        </div>
+                        <div class="product-info">
+                            <h3>Summer Dress</h3>
+                            <p class="product-price">$69.99</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="display: block; margin-bottom: var(--spacing-sm);">View Details</a>
+                            <button class="btn btn-primary" style="width: 100%;">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="#" alt="Sweater">
+                        </div>
+                        <div class="product-info">
+                            <h3>Wool Sweater</h3>
+                            <p class="product-price">$79.99</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="display: block; margin-bottom: var(--spacing-sm);">View Details</a>
+                            <button class="btn btn-primary" style="width: 100%;">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="#" alt="Shorts">
+                        </div>
+                        <div class="product-info">
+                            <h3>Casual Shorts</h3>
+                            <p class="product-price">$39.99</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="display: block; margin-bottom: var(--spacing-sm);">View Details</a>
+                            <button class="btn btn-primary" style="width: 100%;">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="#" alt="Hat">
+                        </div>
+                        <div class="product-info">
+                            <h3>Baseball Cap</h3>
+                            <p class="product-price">$24.99</p>
+                            <a href="product-detail.html" class="btn btn-secondary" style="display: block; margin-bottom: var(--spacing-sm);">View Details</a>
+                            <button class="btn btn-primary" style="width: 100%;">Add to Cart</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ward-robe. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
