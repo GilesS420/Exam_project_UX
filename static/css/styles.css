@@ -1,0 +1,45 @@
+@import "variables.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+body {
+    background-color: var(--primary-bg-colour);
+}
+header {
+    background-color: var(--accent-bg-colour);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.hidden {
+    display: none;
+}
+
+/*Nav*/
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+nav ul li {
+    float: none;
+}
+nav ul li a {
+    color: var(--primary-text-colour);
+    display: block;
+    padding: 0.25rem 1rem;
+    text-decoration: none;
+}
+
+/* Hamburger menu */
+.hamburger-menu {
+    display: none;
+}
+.icon {
+    color: var(--primary-text-colour);
+    text-decoration: none;
+}
