@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ward-robe | Shop</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/variables.css">
+    <link rel="stylesheet" href="../static/css/components/navigation.css">
+    <link rel="stylesheet" href="../static/css/components/footer.css">
+    <script type="module" src="static/js/api.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html">Ward-robe</a>
+            </div>
+            <nav class="navbar-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="product-listing-page">
+        <section class="products-header">
+            <h1>Our Products</h1>
+            <p>Browse our collection of premium clothing</p>
+        </section>
+
+        <section class="products-section">
+            <aside class="filters-sidebar">
+                <h3>Filters</h3>
+                
+                <h4>Category</h4>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="category">
+                    <span>men's clothing</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="category">
+                    <span>women's clothing</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="category">
+                    <span>electronics</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="category">
+                    <span>jewelery</span>
+                </label>
+
+                <button class="btn btn-primary" style="width: 100%; margin-top: var(--s-lg);">Apply Filters</button>
+            </aside>
+
+            <div class="products-container">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="path/to/image1.png" alt="Black and White T-shirt">
+                        </div>
+                        <span class="product-category-tag">men's clothing</span>
+                        <p class="product-price">€22.30</p>
+                        <p class="product-name">mens casual premium slim fit t-shirts</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image-container">
+                             <img src="path/to/image2.png" alt="Blue Long Sleeve Shirt">
+                        </div>
+                        <span class="product-category-tag">men's clothing</span>
+                        <p class="product-price">€15.99</p>
+                        <p class="product-name">mens casual slim fit</p>
+                    </div>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ward-robe. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
