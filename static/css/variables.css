@@ -17,6 +17,7 @@
 
     --product-title-size: calc(5.205px + 1.3vw);
     --cart-button-size: calc(0.59px + 2.5vw);
+    --logo-size:calc(1.82px + 3.8vw);
 
     /* Line height */
     --lh-tight: 1.1;
