@@ -18,20 +18,27 @@
     color: var(--c-tt-green);
 }
 
+.icon {
+    font-size: var(--h3-pref);
+}
+
 ul > li {
     display: inline-block;
     margin-right: var(--s-2xs);
 }
 
 #hamburger-links {
-    display: flex;
+    display: none;
     flex-direction: column;
     text-align: right;
     gap: var(--s-xs);
     margin-top: var(--s-sm);
 }
+#hamburger-links.show {
+    display: flex;
+}
 @media (min-width: 320px) {
-    #hamburger-links {
+    #hamburger-links.show {
         flex-direction: row;
         justify-content: flex-end;
         text-align: right;

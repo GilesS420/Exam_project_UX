@@ -46,7 +46,7 @@
 
                 <div class="product-detail-image">
                 </div>
-                
+
                 <div class="product-title">
                 </div>
 
@@ -58,37 +58,26 @@
                     <div class="product-category">
                     </div>
 
-                    <div class="product-options">
+                    <button class="btn btn-primary" style="flex: 1;">Add to Basket</button>
 
-                        <div class="option-group">
-                            <label for="quantity">Quantity:</label>
-                            <div class="quantity-selector">
-                                <button class="qty-btn" aria-label="Decrease quantity">−</button>
-                                <input type="number" id="quantity" class="qty-input" value="1" min="1">
-                                <button class="qty-btn" aria-label="Increase quantity">+</button>
-                            </div>
+                </div>
+
+
+                <!-- Product Tabs -->
+                <div class="product-tabs">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" data-tab="product-description">Description</button>
+                        <button class="tab-btn" data-tab="reviews">Reviews</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="product-description">
+                            <h3>Product Description</h3>
                         </div>
-                    </div>
 
-                    <button class="btn btn-primary" style="flex: 1;">Add to Cart</button>
-
-                </div>
-            </div>
-
-            <!-- Product Tabs -->
-            <div class="product-tabs">
-                <div class="tabs-header">
-                    <button class="tab-btn active" data-tab="product-description">Description</button>
-                    <button class="tab-btn" data-tab="reviews">Reviews</button>
-                </div>
-
-                <div class="tab-content">
-                    <div class="tab-pane active" id="product-description">
-                        <h3>Product Description</h3>
-                    </div>
-
-                    <div class="tab-pane" id="reviews">
-                        <h3>Customer Reviews</h3>
+                        <div class="tab-pane" id="reviews">
+                            <h3>Customer Reviews</h3>
+                        </div>
                     </div>
                 </div>
             </div>
