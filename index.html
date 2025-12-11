@@ -25,7 +25,7 @@
                     <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
-    
+
                     <ul id="hamburger-links" class="hamburger-menu">
                         <li id="signup" class="hidden"><a href="signup.htm">Sign up</a></li>
                         <li id="login" class="hidden"><a href="login.htm">Login</a></li>
@@ -40,31 +40,45 @@
         </div>
     </header>
 
-    <!-- Main content -->
-    <main class="main-content">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to Ward-robe</h1>
-                <p>Discover the latest fashion trends</p>
-                <a href="products.html" class="btn btn-primary">Shop Now</a>
-            </div>
-        </section>
+    <link rel="stylesheet" href="./static/css/styles.css">
+    <link rel="stylesheet" href="./static/css/page-styles/index.css">
+    </head>
 
-        <section class="featured-products">
-            <h2>Featured Products</h2>
-            <div class="products-grid">
-                <article class="product-card">
-                    <div class="product-image">
-                        <img src="#" alt="Product 1">
-                    </div>
-                    <div class="product-info">
-                        <h3>Product Name</h3>
-                        <p class="product-price">$99.99</p>
-                        <button class="btn btn-secondary">Add to Cart</button>
-                    </div>
-                </article>
+    <body>
+        <!-- Main content -->
+        <main class="main-content">
+            <section class="hero-section">
+                <header class="hero-header">
+                    <h1>new arrivals</h1>
+                </header>
+                <div class="hero-blur-box"></div>
+                <div class="hero-img-container img-container">
+                    <picture>
+                        <source srcset="static/assets/images/large/ward-robe-hero-large.avif"
+                            media="(min-width: 1024px)">
+                        <source srcset="static/assets/images/medium/ward-robe-hero-medium.avif"
+                            media="(min-width: 668px)">
+                        <img src="static/assets/images/small/ward-robe-hero-small.avif"
+                            alt="Black and white image, Ward -robe hero image, model looking directly into camera, wearing a t-shirt on a grey background">
+                    </picture>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h2><a href="categories?category=clothing">Clothing</a></h2>
+                </header>
+                <section>
+                    <article>img</article>
+                    <article>img</article>
+                    <article>text content</article>
 
-                <article class="product-card">
+                </section>
+            </section>
+
+
+
+
+            <!-- <article class="product-card">
                     <div class="product-image">
                         <img src="#" alt="Product 2">
                     </div>
@@ -95,43 +109,41 @@
                         <p class="product-price">$99.99</p>
                         <button class="btn btn-secondary">Add to Cart</button>
                     </div>
-                </article>
-            </div>
-        </section>
-    </main>
+                </article> -->
+        </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h4>About</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Returns</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ward-robe. All rights reserved.</p>
             </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Ward-robe. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 
 </html>

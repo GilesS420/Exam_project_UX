@@ -1,0 +1,48 @@
+.hero-section{
+    display: grid;
+    overflow: hidden;
+    position: relative;
+    .hero-img-container,.hero-blur-box, .hero-header{
+    grid-area: 1/1;
+    }
+
+    .img-container{
+        width: var(--max-vw);
+        picture{
+            background-color: var(--c-cc-black);
+        }
+        img{
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    .hero-blur-box{
+        display: block;
+        height: 100%;
+        width: 45%;
+        z-index: 10;
+        backdrop-filter: blur(2.5px);
+        margin-left: auto;
+        border-left: var(--c-tt-green) solid 1px;
+    }
+    .hero-header{
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        bottom: 25%;
+        right: 18%;
+        z-index: 20;
+        color: var(--c-lb-white);
+    }
+    @media (min-width: 668px) {
+        .hero-blur-box{
+            backdrop-filter: blur(5px);
+        }
+        .hero-header{
+            bottom: 50%;
+            right: 28%;
+        }
+    }
+}
+

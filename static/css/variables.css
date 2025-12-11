@@ -4,6 +4,9 @@
     --min-vw: 320;  
     --max-vw: 1200;
 
+    --min-vh: 50;  
+    --max-vh: 100;
+
     /* Prefereable font sizes */
     --h1-pref: calc(3.27px + 7.73vw);
     --h2-pref: calc(1.82px + 5.18vw);
@@ -12,6 +15,7 @@
     --body-pref: calc(7.45px + 0.85vw);
     --body-small-pref: calc(5.25px + 0.85vw);
 
+    /* Line height */
     --lh-tight: 1.1;
     --lh-default: 1.4;
     --lh-loose: 1.6;
@@ -70,15 +74,15 @@
 /* Font faces */
 @font-face {
     font-family: Helvetica-Neue-light;
-    src: url("../fonts/HelveticaNeue-Light.ttf");
+    src: url("../assets/fonts/HelveticaNeue-Light.ttf");
 }
 
 @font-face {
     font-family: Helvetica-Neue-regular;
-    src: url("../fonts/HelveticaNeue-Regular.ttf");
+    src: url("../assets/fonts/HelveticaNeue-Regular.ttf");
 }
 
 @font-face {
     font-family: Helvetica-Neue-medium;
-    src: url("../fonts/HelveticaNeue-Medium.ttf");
+    src: url("../assets/fonts/HelveticaNeue-Medium.ttf");
 }
