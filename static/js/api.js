@@ -32,16 +32,6 @@ function displayProducts(products) {
         imageLink.appendChild(img);
         article.appendChild(imageLink);
 
-        //category
-        const category = document.createElement('p');
-        category.innerHTML = `${product.category}`;
-        article.appendChild(category);
-
-        //price
-        const price = document.createElement('p');
-        price.innerHTML = `$${product.price}`;
-        article.appendChild(price);
-
         // header + link
         const header = document.createElement('header');
         const h2 = document.createElement('h2');
@@ -56,6 +46,11 @@ function displayProducts(products) {
         header.appendChild(h2);
         article.appendChild(header);
 
+        //price
+        const price = document.createElement('p');
+        price.innerHTML = `$${product.price}`;
+        article.appendChild(price);
+        price.classList.add('product-price');
 
         container.appendChild(article);
     });
@@ -64,23 +59,33 @@ function displayProducts(products) {
 
 // FILTER LOGIC
 
-document.querySelector('.btn-primary').addEventListener('click', applyFilters);
+const categoryButtons = document.querySelectorAll('.category-btn');
 
-function applyFilters() {
-    let filtered = [...allProducts];
+categoryButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const isActive = btn.classList.contains('active');
 
-    const selectedCategories = Array.from(
-        document.querySelectorAll("input[name='category']:checked")
-    ).map(cb => cb.nextElementSibling.innerText.toLowerCase());
+        // remove active class from all buttons
+        categoryButtons.forEach(b => b.classList.remove('active'));
 
-    if (selectedCategories.length > 0) {
-        filtered = filtered.filter(product =>
-            selectedCategories.includes(product.category.toLowerCase())
-        );
-    }
+        let filtered = [...allProducts];
 
-    displayProducts(filtered);
-}
+        if (!isActive) {
+            // add active class to the clicked button
+            btn.classList.add('active');
+
+            // get the selected category
+            const selectedCategory = btn.innerText.toLowerCase();
+
+            // filter products
+            filtered = filtered.filter(product =>
+                product.category.toLowerCase() === selectedCategory
+            );
+        }
+
+        displayProducts(filtered);
+    });
+});
 
 
 //FETCH ONE PRODUCT - PRODUCT DETAIL PAGE

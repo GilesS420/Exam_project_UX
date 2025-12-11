@@ -15,6 +15,8 @@
     --body-pref: calc(7.45px + 0.85vw);
     --body-small-pref: calc(5.25px + 0.85vw);
 
+    --product-title-size: calc(5.205px + 1.3vw);
+
     /* Line height */
     --lh-tight: 1.1;
     --lh-default: 1.4;
@@ -66,7 +68,7 @@
     --f-medium: 'Helvetica-Neue-medium', 'sans-serif';
 
 /* Font weights */
-    --fw-light: 500;
+    --fw-light: 300;
     --fw-regular: 500;
     --fw-medium: 600;
 }
