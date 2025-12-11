@@ -69,6 +69,7 @@ p.small{
 .hamburger-menu {
     display: none;
 }
+<<<<<<< Updated upstream
 
 /* PRODUCT DETAIL - TABS */
 
@@ -78,4 +79,9 @@ p.small{
 
 .tab-pane.active {
     display: block;
+=======
+.icon {
+    color: var(--primary-text-colour);
+    text-decoration: none;
+>>>>>>> Stashed changes
 }
