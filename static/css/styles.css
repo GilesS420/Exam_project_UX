@@ -12,6 +12,10 @@
     display: none;
 }
 
+body {
+    background-color: var(--c-ep-grey);
+}
+
 h1{
     font-family: var(--f-light);
     font-size: clamp(var(--s-3md), var(--h1-pref), var(--s-2xl));
@@ -111,17 +115,12 @@ p.small{
     border: 2px solid var(--c-tt-green);
     background-color: var(--c-ep-grey);
     cursor: pointer;
-    font-family: var(--f-regular);
+    font-family: var(--f-medium);
     font-size: clamp(var(--s-sm), var(--body-pref), var(--s-2sm));
-    font-weight: var(--fw-medium);
 }
 
 .category-btn.active {
     background-color: var(--c-tt-green);
-}
-
-.products-main {
-    background-color: var(--c-ep-grey);
 }
 
 .products-grid {
@@ -204,17 +203,28 @@ p.small{
 
 .product-detail-main button {
     font-family: var(--f-regular);
-    border: none;
 }
 .btn-primary {
-    padding: var(--s-sm);
+    padding: var(--s-md) var(--s-xl);
     background-color: var(--c-tt-green);
+    border: 2px solid var(--c-tt-green);
     cursor: pointer;
-    font-family: var(--f-regular);
-    font-size: clamp(var(--s-sm), var(--body-pref), var(--s-2sm));
-    font-weight: var(--fw-medium);
+    font-size: var(--cart-button-size);
+    font-family: var(--f-light);
     margin: var(--s-lg) 0;
 }
+
 .tab-btn {
-    padding: var(--s-2xs) var(--s-xs);
+    padding: var(--s-sm);
+    margin-bottom: var(--s-xs);
+    border: 2px solid var(--c-cc-black);
+    background-color: var(--c-ep-grey);
+    cursor: pointer;
+    font-family: var(--f-regular);
+    font-size: var(--body-small-pref);
+}
+
+.tab-btn.active {
+    background-color: var(--c-cc-black);
+    color: var(--c-lb-white);
 }

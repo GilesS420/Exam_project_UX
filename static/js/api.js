@@ -182,7 +182,9 @@ tabButtons.forEach(btn => {
         const target = btn.getAttribute("data-tab");
 
         tabPanes.forEach(pane => pane.classList.remove("active"));
+        tabButtons.forEach(pane => pane.classList.remove("active"));
         
+        btn.classList.add("active");
         document.getElementById(target).classList.add("active");
     });
 });
