@@ -195,7 +195,7 @@ p.small{
 
 .product-title h1 {
     font-size: var(--h2-pref);
-    font-weight: var(--fw-medium)
+    font-family: var(--f-regular)
 }
 
 .product-detail-image img {
