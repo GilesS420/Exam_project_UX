@@ -23,11 +23,18 @@ function displayProducts(products) {
         // header + link
         const header = document.createElement('header');
         const h2 = document.createElement('h2');
+<<<<<<< Updated upstream
         const titleLink = document.createElement('a');
         titleLink.href = `product-detail.html?id=${product.id}`;
         titleLink.innerText = product.title;
 
         h2.appendChild(titleLink);
+=======
+        const link = document.createElement('a');
+        link.href = `product-detail.html?id=${product.id}`;
+        link.innerText = product.title;
+        h2.appendChild(link);
+>>>>>>> Stashed changes
         header.appendChild(h2);
         article.appendChild(header);
 
