@@ -6,3 +6,7 @@ function hamburgerMenu() {
     menu.style.display = "flex";
   }
 } 
+
+function hamburgerMenu() {
+    document.getElementById("hamburger-links").classList.toggle("show");
+}

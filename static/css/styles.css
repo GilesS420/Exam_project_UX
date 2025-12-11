@@ -155,3 +155,63 @@ p.small{
 .product-price {
     font-weight: var(--fw-light);
 }
+
+/*----------------------------------------*/
+/* INDIVIDUAL PRODUCT PAGE */
+.product-detail-main {
+    margin: var(--s-xl);
+}
+
+.product-detail-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+} 
+@media (min-width: 501px) {
+    .product-detail-container {
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "product-image product-name"
+        "product-image product-info"
+        "product-image product-desc-review"
+        ;
+    }
+} 
+
+.product-detail-image {
+    grid-area: product-image;
+}
+.product-title {
+    grid-area: product-name;
+}
+.product-details {
+    grid-area: product-info;
+}
+.product-tabs {
+    grid-area: product-desc-review;
+}
+
+.product-title h1 {
+    font-size: var(--h2-pref);
+    font-weight: var(--fw-medium)
+}
+
+.product-detail-image img {
+    max-width: 100%;
+}
+
+.product-detail-main button {
+    font-family: var(--f-regular);
+    border: none;
+}
+.btn-primary {
+    background-color: var(--c-tt-green);
+    color: var(--c-cc-black);
+    padding: var(--s-xs) var(--s-sm);
+    margin: var(--s-lg) 0;
+}
+.tab-btn {
+    padding: var(--s-2xs) var(--s-xs);
+}
