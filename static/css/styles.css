@@ -67,3 +67,13 @@ p.small{
 .hamburger-menu {
     display: none;
 }
+
+/* PRODUCT DETAIL - TABS */
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
