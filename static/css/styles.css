@@ -79,3 +79,40 @@ p.small{
 .tab-pane.active {
     display: block;
 }
+
+
+/* PRODUCTS PAGE */
+
+.filters-container {
+    margin: 0 var(--s-4xl);
+    padding: var(--s-xl) 0;
+
+    > label {
+        margin-right: var(--s-sm);
+    }
+}
+
+.products-main {
+    background-color: var(--c-ep-grey);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--s-xl);
+    margin: 0 var(--s-4xl);
+    padding: var(--s-4xl) 0;
+    align-items: center;
+}
+
+.product-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: var(--s-3sm);
+}
+
+.product-title {
+    font-size: var(--h4-pref);
+}
