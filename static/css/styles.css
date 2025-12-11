@@ -207,9 +207,12 @@ p.small{
     border: none;
 }
 .btn-primary {
+    padding: var(--s-sm);
     background-color: var(--c-tt-green);
-    color: var(--c-cc-black);
-    padding: var(--s-xs) var(--s-sm);
+    cursor: pointer;
+    font-family: var(--f-regular);
+    font-size: clamp(var(--s-sm), var(--body-pref), var(--s-2sm));
+    font-weight: var(--fw-medium);
     margin: var(--s-lg) 0;
 }
 .tab-btn {
