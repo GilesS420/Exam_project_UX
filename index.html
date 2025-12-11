@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ward-robe | Home</title>
-    <link rel="stylesheet" href="../static/css/styles.css">
-    <link rel="stylesheet" href="../static/css/variables.css">
-    <link rel="stylesheet" href="../static/css/components/navigation.css">
-    <link rel="stylesheet" href="../static/css/components/footer.css">
+    <link rel="stylesheet" href="./static/css/page-styles/index.css">
+    <link rel="stylesheet" href="./static/css/styles.css">
     <script src="static/js/nav.js" defer></script>
 </head>
 
@@ -40,10 +38,6 @@
         </div>
     </header>
 
-    <link rel="stylesheet" href="./static/css/styles.css">
-    <link rel="stylesheet" href="./static/css/page-styles/index.css">
-    </head>
-
     <body>
         <!-- Main content -->
         <main class="main-content">
@@ -58,17 +52,29 @@
                             media="(min-width: 1024px)">
                         <source srcset="static/assets/images/medium/ward-robe-hero-medium.avif"
                             media="(min-width: 668px)">
-                        <img src="static/assets/images/small/ward-robe-hero-small.avif"
+                        <img loading="lazy" src="static/assets/images/small/ward-robe-hero-small.avif"
                             alt="Black and white image, Ward -robe hero image, model looking directly into camera, wearing a t-shirt on a grey background">
                     </picture>
                 </div>
             </section>
             <section>
                 <header>
-                    <h2><a href="categories?category=clothing">Clothing</a></h2>
+                    <h2><a href="products.html?category=clothing">Clothing</a></h2>
                 </header>
                 <section>
-                    <article>img</article>
+                    <article class="category-box-item">
+                        <header class="category-label">
+                            <h3>men's clothing</h3>
+                        </header>
+                        <div class="img-container category-box">
+                            <a href="products.html?category=mens-clothing">
+                                <picture>
+                                    <img loading="lazy" src="static/assets/images/medium/category-backdrop-mens.avif"
+                                        alt="Product image">
+                                </picture>
+                            </a>
+                        </div>
+                    </article>
                     <article>img</article>
                     <article>text content</article>
 

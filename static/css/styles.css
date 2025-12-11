@@ -1,6 +1,6 @@
 @import "variables.css";
 @import "./components/footer.css";
-@import "./components/navigatios.css";
+@import "./components/navigation.css";
 
 *{
     margin: 0;
