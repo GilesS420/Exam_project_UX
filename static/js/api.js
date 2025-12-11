@@ -20,6 +20,17 @@ function displayProducts(products) {
         const article = document.createElement('article');
         article.classList.add('product-card');
 
+        // header + link
+        const header = document.createElement('header');
+        const h2 = document.createElement('h2');
+        const titleLink = document.createElement('a');
+        titleLink.href = `product-detail.html?id=${product.id}`;
+        titleLink.innerText = product.title;
+
+        h2.appendChild(titleLink);
+        header.appendChild(h2);
+        article.appendChild(header);
+
         // image + link
         const imageLink = document.createElement('a');
         imageLink.href = `product-detail.html?id=${product.id}`;
@@ -34,29 +45,13 @@ function displayProducts(products) {
 
         //category
         const category = document.createElement('p');
-        category.innerHTML = `${product.category}`;
+        category.innerHTML = `<strong>Category:</strong> ${product.category}`;
         article.appendChild(category);
 
         //price
         const price = document.createElement('p');
-        price.innerHTML = ` $${product.price}`;
+        price.innerHTML = `<strong>Price:</strong> $${product.price}`;
         article.appendChild(price);
-
-        // header + link
-        const header = document.createElement('header');
-        header.classList.add('product-header');
-
-        const h2 = document.createElement('h2');
-        h2.classList.add('product-title');
-
-        const titleLink = document.createElement('a');
-        titleLink.classList.add('product-title-link');
-        titleLink.href = `product-detail.html?id=${product.id}`;
-        titleLink.innerText = product.title;
-
-        h2.appendChild(titleLink);
-        header.appendChild(h2);
-        article.appendChild(header);
 
         container.appendChild(article);
     });
@@ -65,7 +60,7 @@ function displayProducts(products) {
 
 // FILTER LOGIC
 
-document.querySelector('.filter-btn').addEventListener('click', applyFilters);
+document.querySelector('.btn-primary').addEventListener('click', applyFilters);
 
 function applyFilters() {
     let filtered = [...allProducts];
@@ -104,62 +99,39 @@ fetch(`${BASE_URL}/${productId}`)
 
 function renderProduct(product) {
 
-    // image
-    const imageContainer = document.querySelector(".product-detail-image");
-
-    const img = document.createElement("img");
-    img.src = product.image;
-    img.alt = product.title;
-
-    imageContainer.appendChild(img);
-
     // title
-    const titleContainer = document.querySelector(".product-title");
+    document.querySelector(".product-title").innerHTML = `
+        <h1>${product.title}</h1>
+    `;
 
-    const h1 = document.createElement("h1");
-    h1.innerText = product.title;
+    // image
+    document.querySelector(".product-detail-image").innerHTML = `
+        <img src="${product.image}" alt="${product.title}">
+    `;
 
-    titleContainer.appendChild(h1);
+    //price
+    document.querySelector(".product-price").innerHTML = `
+        <h2>$${product.price}</h2>
+    `;
 
-    // price
-    const priceContainer = document.querySelector(".product-price");
-
-    const price = document.createElement("h2");
-    price.innerText = `$${product.price}`;
-
-    priceContainer.appendChild(price);
-
-    // category
-    const categoryContainer = document.querySelector(".product-category");
-
-    const categoryP = document.createElement("p");
-    categoryP.innerHTML = `<strong>Category:</strong> ${product.category}`;
-
-    categoryContainer.appendChild(categoryP);
+    //category
+    document.querySelector(".product-category").innerHTML = `
+        <p><strong>Category:</strong> ${product.category}</p>
+    `;
 
     // description
-    const descriptionContainer = document.querySelector("#product-description");
-
-    const descP = document.createElement("p");
-    descP.innerText = product.description;
-
-    descriptionContainer.appendChild(descP);
+    document.querySelector("#product-description").innerHTML += `
+        <p>${product.description}</p>
+    `;
 
     // reviews
-    const reviewsContainer = document.querySelector("#reviews");
+    const stars = "★".repeat(Math.round(product.rating.rate)) +
+                  "☆".repeat(5 - Math.round(product.rating.rate));
 
-    const stars =
-        "★".repeat(Math.round(product.rating.rate)) +
-        "☆".repeat(5 - Math.round(product.rating.rate));
-
-    const ratingP = document.createElement("p");
-    ratingP.innerHTML = `${stars} (${product.rating.rate})`;
-
-    const countP = document.createElement("p");
-    countP.innerText = `${product.rating.count} total reviews`;
-
-    reviewsContainer.appendChild(ratingP);
-    reviewsContainer.appendChild(countP);
+    document.querySelector("#reviews").innerHTML += `
+        <p><strong>Rating:</strong> ${stars} (${product.rating.rate})</p>
+        <p>${product.rating.count} total reviews</p>
+    `;
 }
 
 
