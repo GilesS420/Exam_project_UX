@@ -6,6 +6,10 @@
     list-style: none;
 }
 
+.hidden {
+    display: none;
+}
+
 h1{
     font-family: var(--f-light);
     font-size: clamp(var(--s-3md), var(--h1-pref), var(--s-2xl));
@@ -57,4 +61,9 @@ p.small{
     font-size: clamp(var(--s-xs), var(--body-small-pref), var(--s-sm));
     font-weight: var(--fw-regular);
     line-height: var(--lh-default);
+}
+
+/* Hamburger menu */
+.hamburger-menu {
+    display: none;
 }
