@@ -20,17 +20,6 @@ function displayProducts(products) {
         const article = document.createElement('article');
         article.classList.add('product-card');
 
-        // header + link
-        const header = document.createElement('header');
-        const h2 = document.createElement('h2');
-        const titleLink = document.createElement('a');
-        titleLink.href = `product-detail.html?id=${product.id}`;
-        titleLink.innerText = product.title;
-
-        h2.appendChild(titleLink);
-        header.appendChild(h2);
-        article.appendChild(header);
-
         // image + link
         const imageLink = document.createElement('a');
         imageLink.href = `product-detail.html?id=${product.id}`;
@@ -52,6 +41,17 @@ function displayProducts(products) {
         const price = document.createElement('p');
         price.innerHTML = `<strong>Price:</strong> $${product.price}`;
         article.appendChild(price);
+
+        // header + link
+        const header = document.createElement('header');
+        const h2 = document.createElement('h2');
+        const titleLink = document.createElement('a');
+        titleLink.href = `product-detail.html?id=${product.id}`;
+        titleLink.innerText = product.title;
+
+        h2.appendChild(titleLink);
+        header.appendChild(h2);
+        article.appendChild(header);
 
         container.appendChild(article);
     });
