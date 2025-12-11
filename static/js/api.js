@@ -100,38 +100,66 @@ fetch(`${BASE_URL}/${productId}`)
 function renderProduct(product) {
 
     // title
-    document.querySelector(".product-title").innerHTML = `
-        <h1>${product.title}</h1>
-    `;
+    const titleContainer = document.querySelector(".product-title");
+
+    const h1 = document.createElement("h1");
+    h1.innerText = product.title;
+
+    titleContainer.appendChild(h1);
+
 
     // image
-    document.querySelector(".product-detail-image").innerHTML = `
-        <img src="${product.image}" alt="${product.title}">
-    `;
+    const imageContainer = document.querySelector(".product-detail-image");
 
-    //price
-    document.querySelector(".product-price").innerHTML = `
-        <h2>$${product.price}</h2>
-    `;
+    const img = document.createElement("img");
+    img.src = product.image;
+    img.alt = product.title;
 
-    //category
-    document.querySelector(".product-category").innerHTML = `
-        <p><strong>Category:</strong> ${product.category}</p>
-    `;
+    imageContainer.appendChild(img);
+
+
+    // price
+    const priceContainer = document.querySelector(".product-price");
+
+    const price = document.createElement("h2");
+    price.innerText = `$${product.price}`;
+
+    priceContainer.appendChild(price);
+
+
+    // category
+    const categoryContainer = document.querySelector(".product-category");
+
+    const categoryP = document.createElement("p");
+    categoryP.innerHTML = `<strong>Category:</strong> ${product.category}`;
+
+    categoryContainer.appendChild(categoryP);
+
 
     // description
-    document.querySelector("#product-description").innerHTML += `
-        <p>${product.description}</p>
-    `;
+    const descriptionContainer = document.querySelector("#product-description");
+
+    const descP = document.createElement("p");
+    descP.innerText = product.description;
+
+    descriptionContainer.appendChild(descP);
+
 
     // reviews
-    const stars = "★".repeat(Math.round(product.rating.rate)) +
-                  "☆".repeat(5 - Math.round(product.rating.rate));
+    const reviewsContainer = document.querySelector("#reviews");
 
-    document.querySelector("#reviews").innerHTML += `
-        <p><strong>Rating:</strong> ${stars} (${product.rating.rate})</p>
-        <p>${product.rating.count} total reviews</p>
-    `;
+    const stars =
+        "★".repeat(Math.round(product.rating.rate)) +
+        "☆".repeat(5 - Math.round(product.rating.rate));
+
+    const ratingP = document.createElement("p");
+    ratingP.innerHTML = `${stars} (${product.rating.rate})`;
+
+    const countP = document.createElement("p");
+    countP.innerText = `${product.rating.count} total reviews`;
+
+    reviewsContainer.appendChild(ratingP);
+    reviewsContainer.appendChild(countP);
 }
 
 
