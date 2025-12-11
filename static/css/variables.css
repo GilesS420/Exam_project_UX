@@ -12,6 +12,7 @@
     --body-pref: calc(7.45px + 0.85vw);
     --body-small-pref: calc(5.25px + 0.85vw);
 
+    /* Line height */
     --lh-tight: 1.1;
     --lh-default: 1.4;
     --lh-loose: 1.6;
