@@ -23,7 +23,7 @@ h1{
 
 h2{
     font-family: var(--f-light);
-    font-size: clamp(var(--s-2md), var(--h2-pref), var(--s-xl));
+    font-size: clamp(var(--s-3md), var(--h2-pref), var(--s-xl));
     font-weight: var(--fw-light);
     text-transform: lowercase;
     line-height: var(--lh-loose);
