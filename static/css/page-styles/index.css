@@ -1,3 +1,12 @@
+/* TEMPORARY */
+main{
+    background-color: var(--c-ep-grey);
+}
+picture{
+ display: block;
+ font-size: 0;
+}
+
 .img-container{
         width: var(--max-vw);
         img{
@@ -12,9 +21,6 @@
     position: relative;
     .hero-img-container,.hero-blur-box, .hero-header{
     grid-area: 1/1;
-    }
-    picture{
-        background-color: var(--c-cc-black);
     }
     .hero-blur-box{
         display: block;
@@ -50,23 +56,44 @@
     display: flex;
     flex-direction: column;
     position: relative;
-   
+    
     .category-box-item{
         display: grid;
+        
         .category-label, .category-box{
             grid-area: 1/1;
         }
-
-        .category-label{
-            position: absolute;
-            right: 0;
-            z-index: 10;
-            background-color: var(--c-sp-grey);
-            width: fit-content;
-            height: fit-content;
-            margin-left: auto;
-            background-color: var(--c-sp-grey);
-        }
+        
     }
-    
+}
+.category-label{
+    position: absolute;
+    right: 0;
+    z-index: 20;
+    color: var(--c-lb-white);
+    background-color: var(--c-sp-grey);
+    width: fit-content;
+    height: fit-content;
+    padding-inline: var(--s-md);
+    margin-left: auto;
+    background-color: var(--c-sp-grey);
+}
+
+.category-text-content{
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-md);
+    margin-top: var(--s-3md);
+}
+
+.btn-primary{
+    background-color: var(--c-tt-green);
+    font-size: clamp(var(--s-2sm), var(--h3-pref), var(--s-2md));
+    font-weight: var(--fw-medium);
+    font-family: var(--f-medium);
+    color: var(--c-cc-black);
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: var(--s-xs)
 }
