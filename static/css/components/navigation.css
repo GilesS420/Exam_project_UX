@@ -1,6 +1,7 @@
 .navbar-icons {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .navbar {
@@ -15,6 +16,12 @@
 }
 
 .navbar-logo a {
+    color: var(--c-lb-white);
+    font-size: var(--logo-size);
+    margin-left: var(--s-sm);
+}
+
+.navbar-logo span {
     color: var(--c-tt-green);
 }
 
@@ -33,6 +40,7 @@ ul > li {
     text-align: right;
     gap: var(--s-xs);
     margin-top: var(--s-sm);
+    font-size: var(--body-pref);
 }
 #hamburger-links.show {
     display: flex;
