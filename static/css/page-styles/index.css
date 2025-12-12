@@ -122,7 +122,7 @@ picture{
     }
 }
 
-header {
+.category-header {
     margin-top: var(--s-xl);
     margin-bottom: var(--s-xs);
     h2 a{
@@ -136,7 +136,7 @@ header {
 
 }
 
-.btn-primary{
+.button-primary{
     background-color: var(--c-tt-green);
     font-size: clamp(var(--s-2sm), var(--h4-pref), var(--s-2md));
     font-weight: var(--fw-regular);
