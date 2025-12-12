@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../static/css/components/navigation.css">
     <link rel="stylesheet" href="../static/css/components/footer.css">
     <script src="static/js/nav.js" defer></script>
+    <script src="static/js/cart.js" defer></script>
 </head>
 
 <body>
@@ -43,96 +44,22 @@
         </section>
 
         <div class="cart-container">
-            <section class="cart-items">
-                <div class="cart-item">
-                    <div class="item-image">
-                        <img src="#" alt="Product 1">
-                    </div>
-                    <div class="item-details">
-                        <h3><a href="product-detail.html">Classic T-Shirt</a></h3>
-                        <p class="item-sku">SKU: PROD-12345</p>
-                        <div class="item-options">
-                            <span>Size: M</span>
-                            <span>Color: Black</span>
-                        </div>
-                    </div>
-                    <div class="item-quantity">
-                        <button class="qty-btn">−</button>
-                        <input type="number" value="1" min="1">
-                        <button class="qty-btn">+</button>
-                    </div>
-                    <div class="item-price">
-                        <p class="price-per-item">$29.99</p>
-                        <p class="total-price">$29.99</p>
-                    </div>
-                    <button class="remove-btn">Remove</button>
-                </div>
+            <section class="cart-content">
+                <div id="cart-item">
 
-                <div class="cart-item">
-                    <div class="item-image">
-                        <img src="#" alt="Product 2">
-                    </div>
-                    <div class="item-details">
-                        <h3><a href="product-detail.html">Blue Jeans</a></h3>
-                        <p class="item-sku">SKU: PROD-54321</p>
-                        <div class="item-options">
-                            <span>Size: L</span>
-                            <span>Color: Blue</span>
-                        </div>
-                    </div>
-                    <div class="item-quantity">
-                        <button class="qty-btn">−</button>
-                        <input type="number" value="2" min="1">
-                        <button class="qty-btn">+</button>
-                    </div>
-                    <div class="item-price">
-                        <p class="price-per-item">$59.99</p>
-                        <p class="total-price">$119.98</p>
-                    </div>
-                    <button class="remove-btn">Remove</button>
-                </div>
-
-                <div class="cart-empty-state" style="display: none;">
-                    <h2>Your cart is empty</h2>
-                    <p>Start shopping to add items to your cart</p>
-                    <a href="products.html" class="btn btn-primary">Continue Shopping</a>
                 </div>
             </section>
 
             <aside class="cart-summary">
                 <h2>Order Summary</h2>
 
-                <div class="summary-row">
-                    <span>Subtotal:</span>
-                    <span>$149.97</span>
+                <div class="subtotal">
+                    <p>Subtotal:</p>
                 </div>
 
-                <div class="summary-row">
-                    <label for="coupon">Coupon Code:</label>
-                </div>
-                <input type="text" id="coupon" class="coupon-input" placeholder="Enter coupon code">
-                <button class="btn btn-secondary" style="width: 100%; margin-top: var(--spacing-md);">Apply Coupon</button>
+                <button id="checkout-button" class="btn btn-primary">Proceed to Checkout</button>
 
-                <div class="summary-row">
-                    <span>Discount:</span>
-                    <span>$0.00</span>
-                </div>
-
-                <div class="summary-row">
-                    <span>Shipping:</span>
-                    <span>Free</span>
-                </div>
-
-                <div class="summary-divider"></div>
-
-                <div class="summary-row total">
-                    <span>Total:</span>
-                    <span>$149.97</span>
-                </div>
-
-                <button class="btn btn-primary" style="width: 100%; padding: var(--spacing-lg); font-size: var(--font-size-lg); margin-top: var(--spacing-lg);">Proceed to Checkout</button>
-
-                <a href="products.html" class="btn btn-secondary" style="width: 100%; padding: var(--spacing-md); display: block; text-align: center; margin-top: var(--spacing-md);">Continue Shopping</a>
+                <a href="products.html" class="btn btn-secondary">Continue Shopping</a>
 
                 <div class="security-badge">
                     <p>🔒 Secure checkout. Your payment information is encrypted.</p>

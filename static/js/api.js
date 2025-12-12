@@ -169,6 +169,13 @@ function renderProduct(product) {
 
     reviewsContainer.appendChild(ratingP);
     reviewsContainer.appendChild(countP);
+
+
+    // add to cart button
+    const addToCartBtn = document.getElementById("add-to-cart-btn");
+    if (addToCartBtn) {
+        addToCartBtn.addEventListener("click", () => addToCart(product));
+    }
 }
 
 
