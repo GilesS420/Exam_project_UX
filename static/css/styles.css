@@ -188,9 +188,28 @@ p.small{
 
 
 /* PRODUCT DETAIL PAGE */
+/* Breadcrumbs */
+#breadcrumb {
+    background-color: var(--c-sp-grey);
+    padding: var(--s-2sm);
+    position: relative;
+}
 
+.breadcrumb-item {
+    text-decoration: none;
+    color: var(--c-cc-black);
+    font-family: var(--f-regular);
+}
+
+#breadcrumb li:last-child a {
+    font-family: var(--f-medium);
+    text-transform: capitalize;
+}
+
+/* Main page */
 .product-detail-main {
     margin: var(--s-xl);
+    text-align: center;
 }
 
 .product-detail-container {
@@ -234,14 +253,38 @@ p.small{
     font-family: var(--f-regular);
 }
 
+.product-detail-image {
+    position: relative;
+    display: inline-block;
+}
+
+.product-category {
+    position: absolute;
+    font-family: var(--f-medium);
+    color: var(--c-lb-white);
+    background-color: var(--c-sp-grey);
+    padding: var(--s-3xs) var(--s-2xs);
+}
+
+
 .btn-primary {
-    padding: var(--s-sm) var(--s-lg);
+    padding: var(--s-xs) var(--s-lg);
     background-color: var(--c-tt-green);
     border: 2px solid var(--c-tt-green);
+    font-size: var(--s-sm);
     cursor: pointer;
-    font-size: var(--cart-button-size);
     font-family: var(--f-light);
-    margin: var(--s-lg) 0;
+    margin: var(--s-lg) 0 0 0;
+}
+.btn-secondary {
+    padding: var(--s-xs) var(--s-lg);
+    background-color: var(--c-cc-black);
+    border: 2px solid var(--c-cc-black);
+    color: var(--c-lb-white);
+    font-size: var(--s-sm);
+    cursor: pointer;
+    font-family: var(--f-light);
+    margin: var(--s-sm) 0 var(--s-lg) 0;
 }
 
 .tab-btn {
@@ -267,8 +310,15 @@ p.small{
         display: block;
         margin: var(--s-3sm) auto;
     }
-} 
+    #breadcrumb {
+        padding: var(--s-md);
+    }
 
+    .btn-secondary {
+        text-align: center;
+    }
+    
+} 
 /* tablet large */
 @media (min-width: 768px) {
     .product-detail-container {
@@ -281,9 +331,27 @@ p.small{
         justify-items: start;
     }
 
+    .btn-primary {
+        margin: var(--s-lg) var(--s-2sm) 0 0;
+    }
+
     .product-detail-image {
         margin-bottom: 0;
         margin-right: var(--s-xl);
     }
-    
+
+    .product-category {
+        top: var(--s-3sm);
+        left: var(--s-md);
+    }
+
+    #breadcrumb {
+        padding: var(--s-lg);
+    }
+    #breadcrumb ul {
+        display: flex;
+        position: absolute;
+        bottom: var(--s-md);
+        left: var(--s-md);
+    }  
 }

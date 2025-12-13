@@ -102,6 +102,7 @@ fetch(`${BASE_URL}/${productId}`)
     .then(res => res.json())
     .then(product => {
         renderProduct(product);
+        renderBreadcrumbs(product);
     })
     .catch(err => console.error(err));
 
@@ -140,7 +141,7 @@ function renderProduct(product) {
     const categoryContainer = document.querySelector(".product-category");
 
     const categoryP = document.createElement("p");
-    categoryP.innerHTML = `<strong>Category:</strong> ${product.category}`;
+    categoryP.innerHTML = `${product.category}`;
 
     categoryContainer.appendChild(categoryP);
 
@@ -188,3 +189,17 @@ tabButtons.forEach(btn => {
         document.getElementById(target).classList.add("active");
     });
 });
+
+// Bread crumbs
+function renderBreadcrumbs(product) {
+    const categoryContainer = document.querySelector("#category-breadcrumb");
+
+    const categoryBreadcrumb = document.createElement("a");
+    categoryBreadcrumb.innerText = product.category;
+    categoryBreadcrumb.href = `products.html?category=${product.category}`;
+    categoryBreadcrumb.classList.add('breadcrumb-item');
+
+    categoryContainer.innerHTML = "";
+
+    categoryContainer.appendChild(categoryBreadcrumb);
+}

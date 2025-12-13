@@ -37,14 +37,23 @@
         </div>
     </header>
 
+    <div id="breadcrumb">
+        <ul>
+            <li><a class="breadcrumb-item" href="index.html">Home /</a></li>
+            <li><a class="breadcrumb-item" href="products.html">Shop /</a></li>
+            <li id="category-breadcrumb"></li>
+        </ul>
+    </div>
+
     <!-- Main content -->
     <main class="product-detail-main">
         <section class="product-detail-section">
             <div class="product-detail-container">
 
-
-                <div class="product-detail-image">
-                </div>
+                    <div class="product-detail-image">
+                        <div class="product-category">
+                        </div>
+                    </div>
 
                 <div class="product-title">
                 </div>
@@ -54,13 +63,13 @@
                     <div class="product-price">
                     </div>
 
-                    <div class="product-category">
-                    </div>
+                    <button class="btn btn-primary">Add to basket</button>
 
-                    <button class="btn btn-primary" style="flex: 1;">add to basket</button>
+                    <a href="cart.html">
+                        <button class="btn btn-secondary">See basket</button>
+                    </a>
 
                 </div>
-
 
                 <!-- Product Tabs -->
                 <div class="product-tabs">
