@@ -19,6 +19,21 @@
                 text-transform: lowercase;
                 line-height: var(--lh-default);
                 text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+    }
+    @media (min-width: 768px) {
+        .footer-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: var(--s-80);
+            margin-inline: auto;
+            .footer-section ul{
+                margin-left: var(--s-xl);
             }
         }
     }

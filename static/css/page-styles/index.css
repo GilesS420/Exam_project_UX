@@ -42,7 +42,7 @@ picture{
         z-index: 20;
         color: var(--c-lb-white);
     }
-    @media (min-width: 668px) {
+    @media (min-width: 768px) {
         .hero-blur-box{
             backdrop-filter: blur(5px);
         }
@@ -91,7 +91,7 @@ picture{
             }
         }   
     }
-    @media (min-width: 668px){
+    @media (min-width: 768px){
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-areas:
         "column1 column2"
