@@ -40,7 +40,10 @@ picture{
         bottom: 25%;
         right: 18%;
         z-index: 20;
-        color: var(--c-lb-white);
+        >*{
+            color: var(--c-lb-white);
+
+        }
     }
     @media (min-width: 768px) {
         .hero-blur-box{

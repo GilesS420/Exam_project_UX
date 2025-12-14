@@ -23,6 +23,7 @@ h1{
     font-weight: var(--fw-light);
     text-transform: lowercase;
     line-height: var(--lh-tight);
+    color: var(--c-cc-black);
 }
 
 h2{
@@ -31,6 +32,7 @@ h2{
     font-weight: var(--fw-light);
     text-transform: lowercase;
     line-height: var(--lh-loose);
+    color: var(--c-cc-black);
 }
 
 h3{
@@ -39,6 +41,7 @@ h3{
     font-weight: var(--fw-light);
     text-transform: lowercase;
     line-height: var(--lh-loose);
+    color: var(--c-cc-black);
 }
 
 h4{
@@ -47,6 +50,7 @@ h4{
     font-weight: var(--fw-regular);
     text-transform: lowercase;
     line-height: var(--lh-default);
+    color: var(--c-cc-black);
 }
 
 p{
@@ -54,6 +58,7 @@ p{
     font-size: clamp(var(--s-sm), var(--body-pref), var(--s-2sm));
     font-weight: var(--fw-light);
     line-height: var(--lh-default);
+    color: var(--c-cc-black);
 }
 
 p.em{
@@ -61,6 +66,7 @@ p.em{
     font-size: clamp(var(--s-sm), var(--body-pref), var(--s-2sm));
     font-weight: var(--fw-medium);
     line-height: var(--lh-default);
+    color: var(--c-cc-black);
 }
 
 p.small{
@@ -68,6 +74,7 @@ p.small{
     font-size: clamp(var(--s-xs), var(--body-small-pref), var(--s-sm));
     font-weight: var(--fw-regular);
     line-height: var(--lh-default);
+    color: var(--c-cc-black);
 }
 
 /* Hamburger menu */

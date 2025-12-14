@@ -50,8 +50,10 @@ function removeFromCart(productId) {
 
 // display cart items
 function displayCart() {
-    const cartContainer = document.getElementById('cart-item');
-    const subtotalContainer = document.querySelector('.subtotal p');
+    const cartContainer = document.getElementById('cart_items_list');
+    const templateCartItem = document.getElementById('template_cart_item')
+    const subtotalContainer = document.querySelector('.subtotal');
+    const itemstotalContainer = document.querySelector('.itemstotal');
 
     // if not on cart page, stop
     if (!cartContainer || !subtotalContainer) return;
@@ -61,46 +63,43 @@ function displayCart() {
 
     if (cart.length === 0) {
         cartContainer.innerHTML = '<p>Your cart is empty.</p>';
-        subtotalContainer.innerText = 'Subtotal: $0.00';
+        subtotalContainer.innerText = '$0.00';
         return;
     }
 
     let subtotal = 0;
+    const fragment = document.createDocumentFragment();
 
     cart.forEach(item => {
         subtotal += item.price * item.quantity;
 
+        //init template
+        const clone = templateCartItem.content.cloneNode(true);
+
         //display product image
-        const img = document.createElement('img');
+        const img = clone.querySelector('img');
         img.src = item.image;
         img.alt = item.title;
 
-        //display product name
-        const title = document.createElement('p');
-        title.innerText = item.title;
+        //add details to the template
+        clone.querySelector('.cart-item-title').innerText = item.title;
+        clone.querySelector('.cart-item-price').innerText = `$${item.price.toFixed(2)}`;
+        clone.querySelector('.cart-item-quantity').innerText = `Quantity: ${item.quantity}`;
 
-        //display product price
-        const price = document.createElement('p');
-        price.innerText = `$${item.price.toFixed(2)}`;
-
-        //display product quantity
-        const quantity = document.createElement('p');
-        quantity.innerText = `Quantity: ${item.quantity}`;
-
-        //create remove button
-        const removeBtn = document.createElement('button');
-        removeBtn.innerText = 'Remove';
+        const removeBtn = clone.querySelector('.cart-item-remove');
         removeBtn.addEventListener('click', () => removeFromCart(item.id));
-
-        // Append to container
-        cartContainer.appendChild(img);
-        cartContainer.appendChild(title);
-        cartContainer.appendChild(price);
-        cartContainer.appendChild(removeBtn);
-        cartContainer.appendChild(document.createElement('hr'));
+        
+        // append template to the document fragment
+        fragment.appendChild(clone);
     });
+    //append fragment to cart container
+    cartContainer.appendChild(fragment);
+    
+    subtotalContainer.innerText = `$${subtotal.toFixed(2)}`;
 
-    subtotalContainer.innerText = `Subtotal: $${subtotal.toFixed(2)}`;
+    // iterate through items and check their quantity, take that value and add to sum
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    itemstotalContainer.innerText = `${totalItems}`;
 }
 
 

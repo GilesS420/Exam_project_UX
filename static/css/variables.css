@@ -63,7 +63,10 @@
     --s-2xl: 6rem;
     --s-3xl: 8rem;
     --s-4xl: 10rem;
+    --s-50: 50%;
+    --s-60: 60%;
     --s-80: 80%;
+    --s-full: 100%;
 
 /* Fonts */
     --f-light: 'Helvetica-Neue-light', 'sans-serif';
