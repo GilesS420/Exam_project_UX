@@ -7,6 +7,21 @@ fetch(BASE_URL)
     .then(products => {
         allProducts = products;
         displayProducts(products);
+
+        // URL filtering for products (product-detail breadcrumbs and index links)
+        // Get categories from the URL
+        const params = new URLSearchParams(window.location.search);
+        const categories = params.getAll('category'); // Use GetAll to grab multiple values for 'category'
+
+        if (categories.length > 0) {
+            // Filter products based on multiple categories
+            const filteredProducts = allProducts.filter(product => 
+                categories.some(category => product.category.toLowerCase() === category.toLowerCase())
+            );
+            displayProducts(filteredProducts);
+        } else {
+            displayProducts(products); // Show all if there's no category filter
+        }
     })
     .catch(err => console.error(err));
 
@@ -203,7 +218,8 @@ function renderBreadcrumbs(product) {
 
     const categoryBreadcrumb = document.createElement("a");
     categoryBreadcrumb.innerText = product.category;
-    categoryBreadcrumb.href = `products.html?category=${product.category}`;
+
+    categoryBreadcrumb.href = `products.html?category=${encodeURIComponent(product.category.toLowerCase())}`;
     categoryBreadcrumb.classList.add('breadcrumb-item');
 
     categoryContainer.innerHTML = "";

@@ -1,0 +1,21 @@
+.main-content {
+    margin: var(--s-xl);
+    text-align: center;
+}
+
+.btn-primary {
+    display: inline-block;
+    width: auto;
+    text-decoration: none;
+    padding: var(--s-xs) var(--s-lg);
+    background-color: var(--c-tt-green);
+    border: 2px solid var(--c-tt-green);
+    font-size: var(--s-sm);
+    cursor: pointer;
+    font-family: var(--f-light);
+    margin: var(--s-lg) 0 0 0;
+}
+
+.main-content p {
+    margin: var(--s-lg) 0 0 0;
+}
