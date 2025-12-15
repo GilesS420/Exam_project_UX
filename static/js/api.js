@@ -31,6 +31,8 @@ function displayProducts(products) {
     const container = document.querySelector('.products-grid');
     container.innerHTML = '';
 
+    const fragment = document.createDocumentFragment();
+
     products.forEach(product => {
         const article = document.createElement('article');
         article.classList.add('product-card');
@@ -38,7 +40,7 @@ function displayProducts(products) {
         // image + link
         const imageLink = document.createElement('a');
         imageLink.href = `product-detail.html?id=${product.id}`;
-        
+
         const img = document.createElement('img');
         img.src = product.image;
         img.alt = product.title;
@@ -50,7 +52,6 @@ function displayProducts(products) {
         // header + link
         const header = document.createElement('header');
         const h2 = document.createElement('h2');
-
         h2.classList.add('product-title');
 
         const titleLink = document.createElement('a');
@@ -61,14 +62,19 @@ function displayProducts(products) {
         header.appendChild(h2);
         article.appendChild(header);
 
-        //price
+        // price
         const price = document.createElement('p');
-        price.innerHTML = `$${product.price}`;
-        article.appendChild(price);
         price.classList.add('product-price');
+        price.innerText = `$${product.price}`;
 
-        container.appendChild(article);
+        article.appendChild(price);
+
+        // append card to fragment
+        fragment.appendChild(article);
     });
+
+    // append fragment once
+    container.appendChild(fragment);
 }
 
 
@@ -123,55 +129,53 @@ fetch(`${BASE_URL}/${productId}`)
 
 
 function renderProduct(product) {
+    const fragment = document.createDocumentFragment();
 
     // title
     const titleContainer = document.querySelector(".product-title");
+    titleContainer.innerHTML = '';
 
     const h1 = document.createElement("h1");
     h1.innerText = product.title;
-
-    titleContainer.appendChild(h1);
-
+    fragment.appendChild(h1);
+    titleContainer.appendChild(fragment.cloneNode(true));
 
     // image
     const imageContainer = document.querySelector(".product-detail-image");
+    imageContainer.innerHTML = '';
 
     const img = document.createElement("img");
     img.src = product.image;
     img.alt = product.title;
-
     imageContainer.appendChild(img);
-
 
     // price
     const priceContainer = document.querySelector(".product-price");
+    priceContainer.innerHTML = '';
 
     const price = document.createElement("h2");
     price.innerText = `$${product.price}`;
-
     priceContainer.appendChild(price);
-
 
     // category
     const categoryContainer = document.querySelector(".product-category");
+    categoryContainer.innerHTML = '';
 
     const categoryP = document.createElement("p");
-    categoryP.innerHTML = `${product.category}`;
-
+    categoryP.innerText = product.category;
     categoryContainer.appendChild(categoryP);
-
 
     // description
     const descriptionContainer = document.querySelector("#product-description");
+    descriptionContainer.innerHTML = '';
 
     const descP = document.createElement("p");
     descP.innerText = product.description;
-
     descriptionContainer.appendChild(descP);
-
 
     // reviews
     const reviewsContainer = document.querySelector("#reviews");
+    reviewsContainer.innerHTML = '';
 
     const stars =
         "★".repeat(Math.round(product.rating.rate)) +
@@ -183,14 +187,12 @@ function renderProduct(product) {
     const countP = document.createElement("p");
     countP.innerText = `${product.rating.count} total reviews`;
 
-    reviewsContainer.appendChild(ratingP);
-    reviewsContainer.appendChild(countP);
+    reviewsContainer.append(ratingP, countP);
 
-
-    // add to cart button
+    // add to cart
     const addToCartBtn = document.getElementById("add-to-cart-btn");
     if (addToCartBtn) {
-        addToCartBtn.addEventListener("click", () => addToCart(product));
+        addToCartBtn.onclick = () => addToCart(product);
     }
 }
 
@@ -215,14 +217,18 @@ tabButtons.forEach(btn => {
 // Bread crumbs
 function renderBreadcrumbs(product) {
     const categoryContainer = document.querySelector("#category-breadcrumb");
+    categoryContainer.innerHTML = '';
+
+    const fragment = document.createDocumentFragment();
 
     const categoryBreadcrumb = document.createElement("a");
     categoryBreadcrumb.innerText = product.category;
-
-    categoryBreadcrumb.href = `products.html?category=${encodeURIComponent(product.category.toLowerCase())}`;
+    categoryBreadcrumb.href = `products.html?category=${encodeURIComponent(
+        product.category.toLowerCase()
+    )}`;
     categoryBreadcrumb.classList.add('breadcrumb-item');
 
-    categoryContainer.innerHTML = "";
-
-    categoryContainer.appendChild(categoryBreadcrumb);
+    fragment.appendChild(categoryBreadcrumb);
+    categoryContainer.appendChild(fragment);
 }
+

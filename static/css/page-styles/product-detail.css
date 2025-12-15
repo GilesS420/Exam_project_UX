@@ -1,4 +1,3 @@
-/* PRODUCT DETAIL PAGE */
 /* Breadcrumbs */
 #breadcrumb {
     background-color: var(--c-sp-grey);
@@ -170,4 +169,17 @@
         bottom: var(--s-md);
         left: var(--s-md);
     }  
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.icon {
+    color: var(--primary-text-colour);
+    text-decoration: none;
 }
