@@ -28,7 +28,7 @@ input {
     margin: var(--s-2xs) 0 0 0;
     width: 100%;
 }
-input[type=email]:focus, input[type=password]:focus {
+input:focus {
     outline: none;
     border: 2.5px solid var(--c-sp-grey);
 }
