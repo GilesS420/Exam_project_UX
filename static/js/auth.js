@@ -34,7 +34,15 @@
     users[email] = { name: name, password: btoa(pass) };
     saveUsers(users);
     setCurrent(email);
-    window.location.href = 'index.html';
+    // redirect to next if provided
+    const params = new URLSearchParams(window.location.search);
+    const next = params.get('next') || localStorage.getItem('returnTo');
+    if (next) {
+      localStorage.removeItem('returnTo');
+      window.location.href = decodeURIComponent(next);
+    } else {
+      window.location.href = 'index.html';
+    }
   }
 
   function loginHandler(evt) {
@@ -48,7 +56,15 @@
     const user = users[email];
     if (!user || user.password !== btoa(pass)) return alert('Invalid email or password.');
     setCurrent(email);
-    window.location.href = 'index.html';
+    // after login redirect to next if present
+    const params = new URLSearchParams(window.location.search);
+    const next = params.get('next') || localStorage.getItem('returnTo');
+    if (next) {
+      localStorage.removeItem('returnTo');
+      window.location.href = decodeURIComponent(next);
+    } else {
+      window.location.href = 'index.html';
+    }
   }
 
   function logout() {
@@ -64,6 +80,19 @@
     if (signup) signup.classList.toggle('hidden', !!current);
     if (login) login.classList.toggle('hidden', !!current);
     if (logoutEl) logoutEl.classList.toggle('hidden', !current);
+    // footer auth link
+    const footerAuth = $('#footer-auth-link');
+    if (footerAuth) {
+      if (current) {
+        footerAuth.textContent = 'Log out';
+        footerAuth.href = 'javascript:void(0);';
+        footerAuth.onclick = function (e) { e.preventDefault(); logout(); };
+      } else {
+        footerAuth.textContent = 'Log in';
+        footerAuth.href = 'login.html';
+        footerAuth.onclick = null;
+      }
+    }
   }
 
   window.logout = logout;
@@ -74,5 +103,30 @@
     if (signupForm) signupForm.addEventListener('submit', signupHandler);
     const loginForm = $('#login-form');
     if (loginForm) loginForm.addEventListener('submit', loginHandler);
+    // Intercept actions that require authentication
+    const checkoutBtn = $('#checkout-button');
+    if (checkoutBtn) {
+      checkoutBtn.addEventListener('click', function (e) {
+        const current = localStorage.getItem(CURRENT_KEY);
+        if (!current) {
+          // remember target and redirect to login
+          const ret = window.location.pathname + window.location.search + window.location.hash;
+          localStorage.setItem('returnTo', ret);
+          window.location.href = 'login.html?next=' + encodeURIComponent(ret);
+        }
+      });
+    }
+    const addToCart = $('#add-to-cart-btn');
+    if (addToCart) {
+      addToCart.addEventListener('click', function (e) {
+        const current = localStorage.getItem(CURRENT_KEY);
+        if (!current) {
+          e.preventDefault();
+          const ret = window.location.pathname + window.location.search + window.location.hash;
+          localStorage.setItem('returnTo', ret);
+          window.location.href = 'login.html?next=' + encodeURIComponent(ret);
+        }
+      });
+    }
   });
 })();
