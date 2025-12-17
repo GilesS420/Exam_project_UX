@@ -1,4 +1,6 @@
+import { addToCart } from "./cart.js";
 const BASE_URL = 'https://fakestoreapi.com/products';
+
 
 let allProducts = []; 
 
@@ -127,74 +129,136 @@ fetch(`${BASE_URL}/${productId}`)
     })
     .catch(err => console.error(err));
 
-
+    // Render product information on single product page
 function renderProduct(product) {
-    const fragment = document.createDocumentFragment();
-
-    // title
+    // --- Title ---
     const titleContainer = document.querySelector(".product-title");
-    titleContainer.innerHTML = '';
+    titleContainer.textContent = "";
 
     const h1 = document.createElement("h1");
-    h1.innerText = product.title;
-    fragment.appendChild(h1);
-    titleContainer.appendChild(fragment.cloneNode(true));
+    h1.textContent = product.title;
+    titleContainer.appendChild(h1);
 
-    // image
+    //Image
     const imageContainer = document.querySelector(".product-detail-image");
-    imageContainer.innerHTML = '';
+    imageContainer.querySelector("img")?.remove();
 
     const img = document.createElement("img");
     img.src = product.image;
     img.alt = product.title;
-    imageContainer.appendChild(img);
+    imageContainer.prepend(img);
 
-    // price
+    //Price
     const priceContainer = document.querySelector(".product-price");
-    priceContainer.innerHTML = '';
+    priceContainer.textContent = "";
 
     const price = document.createElement("h2");
-    price.innerText = `$${product.price}`;
+    price.textContent = `$${product.price}`;
     priceContainer.appendChild(price);
 
-    // category
+    //Category
     const categoryContainer = document.querySelector(".product-category");
-    categoryContainer.innerHTML = '';
+    categoryContainer.textContent = product.category;
 
-    const categoryP = document.createElement("p");
-    categoryP.innerText = product.category;
-    categoryContainer.appendChild(categoryP);
-
-    // description
+    //Description tab
     const descriptionContainer = document.querySelector("#product-description");
-    descriptionContainer.innerHTML = '';
-
+    
     const descP = document.createElement("p");
-    descP.innerText = product.description;
+    descP.textContent = product.description;
     descriptionContainer.appendChild(descP);
 
-    // reviews
+    //Review tab, create 
     const reviewsContainer = document.querySelector("#reviews");
-    reviewsContainer.innerHTML = '';
-
+    //Rating
+    const { rate, count } = product.rating;
     const stars =
-        "★".repeat(Math.round(product.rating.rate)) +
-        "☆".repeat(5 - Math.round(product.rating.rate));
+        "★".repeat(Math.round(rate)) +
+        "☆".repeat(5 - Math.round(rate));
 
     const ratingP = document.createElement("p");
-    ratingP.innerHTML = `${stars} (${product.rating.rate})`;
+    ratingP.textContent = `${stars} (${rate})`;
 
     const countP = document.createElement("p");
-    countP.innerText = `${product.rating.count} total reviews`;
+    countP.textContent = `${count} total reviews`;
 
     reviewsContainer.append(ratingP, countP);
 
-    // add to cart
+    //Add to card button
     const addToCartBtn = document.getElementById("add-to-cart-btn");
-    if (addToCartBtn) {
-        addToCartBtn.onclick = () => addToCart(product);
-    }
+    addToCartBtn.onclick = (e) => {
+        e.preventDefault();
+        addToCart(product);
+    };
 }
+
+// function renderProduct(product) {
+//     const fragment = document.createDocumentFragment();
+
+//     // title
+//     const titleContainer = document.querySelector(".product-title");
+//     titleContainer.innerHTML = '';
+
+//     const h1 = document.createElement("h1");
+//     h1.innerText = product.title;
+//     fragment.appendChild(h1);
+//     titleContainer.appendChild(fragment.cloneNode(true));
+
+//     // image
+//     const imageContainer = document.querySelector(".product-detail-image");
+//     imageContainer.innerHTML = '';
+
+//     const img = document.createElement("img");
+//     img.src = product.image;
+//     img.alt = product.title;
+//     imageContainer.appendChild(img);
+
+//     // price
+//     const priceContainer = document.querySelector(".product-price");
+//     priceContainer.innerHTML = '';
+
+//     const price = document.createElement("h2");
+//     price.innerText = `$${product.price}`;
+//     priceContainer.appendChild(price);
+
+//     // category
+//     const categoryContainer = document.querySelector(".product-category");
+//     categoryContainer.innerHTML = '';
+
+//     const categoryP = document.createElement("p");
+//     categoryP.innerText = product.category;
+//     categoryContainer.appendChild(categoryP);
+
+//     // description
+//     const descriptionContainer = document.querySelector("#product-description");
+//     descriptionContainer.innerHTML = '';
+
+//     const descP = document.createElement("p");
+//     descP.innerText = product.description;
+//     descriptionContainer.appendChild(descP);
+
+//     // reviews
+//     const reviewsContainer = document.querySelector("#reviews");
+//     reviewsContainer.innerHTML = '';
+
+//     const stars =
+//         "★".repeat(Math.round(product.rating.rate)) +
+//         "☆".repeat(5 - Math.round(product.rating.rate));
+
+//     const ratingP = document.createElement("p");
+//     ratingP.innerHTML = `${stars} (${product.rating.rate})`;
+
+//     const countP = document.createElement("p");
+//     countP.innerText = `${product.rating.count} total reviews`;
+
+//     reviewsContainer.append(ratingP, countP);
+
+//     // add to cart
+//     const addToCartBtn = document.getElementById("add-to-cart-btn");
+//     addToCartBtn.addEventListener("click", (e) => {
+//         e.preventDefault();
+//         addToCart(product);
+//     });
+// }
 
 
 // product detail - tabs

@@ -1,71 +1,52 @@
+// import { loginHandler } from "./login.js";
+// import { signupHandler } from "./signup.js";
+// document.querySelector("#signup-form").addEventListener("submit", signupHandler);
+// document.querySelector("#login-form").addEventListener("submit", loginHandler);
+
 (function () {
   const $ = (sel) => document.querySelector(sel);
   const USERS_KEY = 'users_map';
   const CURRENT_KEY = 'currentUser';
-
+  
   function loadUsers() {
     try { return JSON.parse(localStorage.getItem(USERS_KEY) || '{}'); }
     catch (e) { return {}; }
   }
-
+  
   function saveUsers(users) {
     localStorage.setItem(USERS_KEY, JSON.stringify(users));
   }
-
+  
   function setCurrent(email) {
     if (email) localStorage.setItem(CURRENT_KEY, email);
     else localStorage.removeItem(CURRENT_KEY);
     updateNav();
   }
+  
+  
 
-  function signupHandler(evt) {
-    evt.preventDefault();
-    const nameEl = $('#signup-name');
-    const emailEl = $('#signup-email');
-    const passEl = $('#signup-password');
-    const name = nameEl && nameEl.value.trim();
-    const email = emailEl && emailEl.value.trim().toLowerCase();
-    const pass = passEl && passEl.value;
-    if (!name || !email || !pass || pass.length < 6) {
-      return alert('Please fill name, email and a password (min 6 chars).');
-    }
-    const users = loadUsers();
-    if (users[email]) return alert('Account already exists for that email.');
-    users[email] = { name: name, password: btoa(pass) };
-    saveUsers(users);
-    setCurrent(email);
-    // redirect to next if provided
-    const params = new URLSearchParams(window.location.search);
-    const next = params.get('next') || localStorage.getItem('returnTo');
-    if (next) {
-      localStorage.removeItem('returnTo');
-      window.location.href = decodeURIComponent(next);
-    } else {
-      window.location.href = 'index.html';
-    }
-  }
 
-  function loginHandler(evt) {
-    evt.preventDefault();
-    const emailEl = $('#login-email');
-    const passEl = $('#login-password');
-    const email = emailEl && emailEl.value.trim().toLowerCase();
-    const pass = passEl && passEl.value;
-    if (!email || !pass) return alert('Please enter email and password.');
-    const users = loadUsers();
-    const user = users[email];
-    if (!user || user.password !== btoa(pass)) return alert('Invalid email or password.');
-    setCurrent(email);
-    // after login redirect to next if present
-    const params = new URLSearchParams(window.location.search);
-    const next = params.get('next') || localStorage.getItem('returnTo');
-    if (next) {
-      localStorage.removeItem('returnTo');
-      window.location.href = decodeURIComponent(next);
-    } else {
-      window.location.href = 'index.html';
-    }
-  }
+  // function loginHandler(evt) {
+  //   evt.preventDefault();
+  //   const emailEl = $('#login-email');
+  //   const passEl = $('#login-password');
+  //   const email = emailEl && emailEl.value.trim().toLowerCase();
+  //   const pass = passEl && passEl.value;
+  //   if (!email || !pass) return alert('Please enter email and password.');
+  //   const users = loadUsers();
+  //   const user = users[email];
+  //   if (!user || user.password !== btoa(pass)) return alert('Invalid email or password.');
+  //   setCurrent(email);
+  //   // after login redirect to next if present
+  //   const params = new URLSearchParams(window.location.search);
+  //   const next = params.get('next') || localStorage.getItem('returnTo');
+  //   if (next) {
+  //     localStorage.removeItem('returnTo');
+  //     window.location.href = decodeURIComponent(next);
+  //   } else {
+  //     window.location.href = 'index.html';
+  //   }
+  // }
 
   function logout() {
     setCurrent(null);

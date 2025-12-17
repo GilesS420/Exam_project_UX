@@ -1,3 +1,4 @@
+
 //create cart for logged in user OR guest user
 const currentUser = localStorage.getItem("currentUser") || "guest";
 const CART_KEY = `cart_${currentUser}`;
@@ -12,7 +13,7 @@ function saveCart(cart) {
     localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
 
-function addToCart(product, quantity = 1) {
+export function addToCart(product, quantity = 1) {
     const cart = getCart();
 
     const existingProduct = cart.find(item => item.id === product.id);
@@ -51,7 +52,7 @@ function removeFromCart(productId) {
 // display cart items
 function displayCart() {
     const cartContainer = document.getElementById('cart_items_list');
-    const templateCartItem = document.getElementById('template_cart_item')
+    const templateCartItem = document.getElementById('template_cart_item');
     const subtotalContainer = document.querySelector('.subtotal');
     const itemstotalContainer = document.querySelector('.itemstotal');
 

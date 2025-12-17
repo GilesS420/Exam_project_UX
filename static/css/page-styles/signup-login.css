@@ -1,4 +1,4 @@
-main {
+/* main {
     margin: var(--s-2md) var(--s-xl);
     display: flex;
     flex-direction: column;
@@ -16,33 +16,54 @@ main p {
 
 main a {
     color: var(--c-sp-grey);
-}
+} */
 
-input, label {
-    display: block;
-    font-family: var(--f-regular);
-    margin: 0 0 var(--s-2sm) 0;
-}
-input {
-    padding: var(--s-2xs);
-    margin: var(--s-2xs) 0 0 0;
-    width: 100%;
-}
-input:focus {
-    outline: none;
-    border: 2.5px solid var(--c-sp-grey);
-}
-
-h1 {
-    margin: 0 0 var(--s-2md) 0
-}
-
-button {
-    padding: var(--s-xs) var(--s-lg);
-    background-color: var(--c-tt-green);
-    border: 2px solid var(--c-tt-green);
-    font-size: var(--s-sm);
-    cursor: pointer;
-    font-family: var(--f-regular);
-    margin: 0 0 var(--s-2md) 0
+.form{
+    background-color: var(--c-lb-white);
+    padding: var(--s-md) var(--s-sm);
+    
+    fieldset{
+        padding: var(--s-md);
+        margin-bottom: var(--s-2sm);
+    }
+    .form-dual{
+        display: flex;
+        flex-direction: column;
+    }
+    .form-item{
+        display: flex;
+        flex-direction: column;
+        width: var(--s-80);
+        margin-bottom: var(--s-sm);
+        label{
+            font-family: var(--f-regular);
+            font-size: clamp(var(--s-sm), var(--body-pref), var(--s-2sm));
+            font-weight: var(--fw-light);
+            line-height: var(--lh-default);
+            color: var(--c-cc-black);
+        }
+    }
+    input{
+            border: var(--s-4xs) solid var(--c-sp-grey);
+            width: var(--s-full);
+            padding: var(--s-2xs) var(--s-2xs);
+            font-family: var(--f-regular);
+            color: var(--c-cc-black);
+            font-weight: var(--fw-regular);
+            
+            &.short-input{
+                max-width: var(--s-xl);
+            }
+            &:focus{
+                outline-color: var(--c-cc-black);
+            }
+        }
+    legend{
+        font-family: var(--f-regular);
+        font-size: clamp(var(--s-2sm), var(--h4-pref), var(--s-2md));
+        font-weight: var(--fw-regular);
+        line-height: var(--lh-default);
+        color: var(--c-cc-black);
+        padding-inline: var(--s-xs);
+    }
 }

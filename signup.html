@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,55 +8,79 @@
   <link rel="stylesheet" href="static/css/page-styles/signup-login.css">
   <link rel="stylesheet" href="static/css/styles.css">
   <link rel="icon" type="image/x-icon" href="static/assets/icons/favicon.png">
-  <script src="static/js/auth.js" defer></script>
+  <script type="module" src="static/js/auth.js" defer></script>
+  <script src="static/js/signup.js" defer></script>
   <script src="static/js/nav.js" defer></script>
 </head>
+
 <body>
 
   <!-- Navigation Header -->
   <header class="navbar">
-    <div class="navbar-container">
-      <div class="navbar-icons">
-        <div class="navbar-logo">
-          <a href="index.html">ward <span>—</span> robe</a>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
-          ☰
-        </a>
-      </div>
-      <nav class="navbar-menu">
-        <ul id="hamburger-links" class="hamburger-menu">
-          <li id="nav-signup" class="nav-item hidden"><a href="signup.html" class="nav-link">Sign up</a></li>
-          <li id="nav-login" class="nav-item hidden"><a href="login.html" class="nav-link">Login</a></li>
-          <li id="nav-logout" class="nav-item hidden"><a href="javascript:void(0);" class="nav-link" onclick="logout()">Logout</a></li>
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
-          <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+    <nav class="navbar-container ">
+      <figure class="navbar-logo">
+        <a href="index.html"><img src="static/assets/icons/Logo-large.svg" alt="Ward -robe logo"></a>
+        <div class="navbar-icons">
+      </figure>
+      <div>
+        <ul id="navbar-utility">
+          <li>
+            <a href="cart.html">
+              <img class="nav-icon" src="static/assets/icons/Icon-shopping bag.svg" alt="Shopping cart icon">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="nav-icon" src="static/assets/icons/Icon-account.svg" alt="Account icon">
+            </a>
+          </li>
+          <li>
+            <button id="hamburgerToggle">
+              <img class="hamburger-icon nav-icon" src="static/assets/icons/Icon-hamburger.svg"
+                alt="hamburger menu icon">
+            </button>
+          </li>
         </ul>
-      </nav>
-    </div>
+        <nav id="navSecondary" class="nav-secondary hidden anim-dropdown">
+          <ul>
+            <li id="nav-signup">
+              <a href="signup.html" class="button-secondary-small">Sign up</a>
+            </li>
+            <li id="nav-login">
+              <a href="login.html" class="button-primary-small">Login</a>
+            </li>
+            <li id="nav-logout" class="nav-item ">
+              <a href="javascript:void(0);" class="button-primary-small" onclick="logout()">Logout</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </nav>
   </header>
 
   <main>
-
     <h1>Sign up</h1>
-    <form id="signup-form" novalidate>
-      <label>
-        Full name
-        <input type="text" name="name" id="signup-name" required>
-      </label>
-
-      <label>
-        Email
-        <input type="email" name="email" id="signup-email" required>
-      </label>
-
-      <label>
-        Password
-        <input type="password" name="password" id="signup-password" required minlength="6">
-      </label>
-
-      <button type="submit">Create account</button>
+    <form id="signup-form" class="form" novalidate>
+      <fieldset>
+        <legend>Create an account</legend>
+        <div class="form-item">
+          <label for="signup-name">Full name*</label>
+          <input type="text" name="name" id="signup-name" required>
+        </div>
+        <div class="form-item">
+          <label for="signup-email">Email*</label>
+          <input type="email" name="email" id="signup-email" required>
+        </div>
+        <div class="form-item">
+          <label for="signup-password">Password*</label>
+          <input type="password" name="password" id="signup-password" required>
+        </div>
+        <div class="form-item">
+          <label for="signup-repeat-password">Repeat password*</label>
+          <input type="password" name="repeatPassword" id="signup-repeat-password" required>
+        </div>
+      </fieldset>
+      <button class="button-primary">Create account</button>
     </form>
 
     <p>Already have an account? <a href="login.html">Log in</a></p>
@@ -91,4 +116,5 @@
     </div>
   </footer>
 </body>
+
 </html>
