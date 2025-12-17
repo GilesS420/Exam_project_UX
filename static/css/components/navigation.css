@@ -9,7 +9,7 @@
         display: flex;
         align-self: center;
         img{
-            height: var(--s-md);
+            height: var(--s-sm);
         }
     }
     .navbar-container{
@@ -53,7 +53,15 @@
         }
     }
 }
+@media (min-width: 500px) {
+    .navbar .navbar-logo{
+        img{
+            height: var(--s-md);
+        }
+    }
+}
 @media (min-width: 786px) {
+
     .navbar .navbar-container{
         #navbar-utility{
             gap: var(--s-md);
