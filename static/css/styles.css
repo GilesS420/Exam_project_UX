@@ -73,7 +73,33 @@ p.small{
     color: var(--c-cc-black);
 }
 
-/* Hamburger menu */
-.hamburger-menu {
-    display: none;
+.button-primary-small{
+    background-color: var(--c-tt-green);
+    font-size: clamp(var(--s-sm), var(--body-pref), var(--s-2sm));
+    font-weight: var(--fw-regular);
+    font-family: var(--f-regular);
+    color: var(--c-cc-black);
+    text-align: center;
+    text-decoration: none;
+    width: var(--s-full);
+    padding: var(--s-xs)
 }
+
+.button-secondary-small{
+    background-color: var(--c-cc-black);
+    font-size: clamp(var(--s-sm), var(--body-pref), var(--s-2sm));
+    font-weight: var(--fw-regular);
+    font-family: var(--f-regular);
+    color: var(--c-ep-grey);
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: var(--s-xs);
+    border: none;
+    cursor: pointer;
+}
+/* main{
+    max-width: var(--max-vw);
+    margin: auto;
+} */
+ 

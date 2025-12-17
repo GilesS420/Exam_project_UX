@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ward-robe | Home</title>
-    <link rel="stylesheet" href="./static/css/page-styles/index.css">
-    <link rel="stylesheet" href="./static/css/styles.css">
+    <link rel="stylesheet" href="static/css/page-styles/index.css">
+    <link rel="stylesheet" href="static/css/styles.css">
     <link rel="icon" type="image/x-icon" href="static/assets/icons/favicon.png">
     <script src="static/js/nav.js" defer></script>
     <script src="static/js/auth.js" defer></script>
@@ -15,26 +15,51 @@
 <body>
     <!-- Navigation Header -->
     <header class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-icons">
-                <div class="navbar-logo">
-                    <a href="index.html">ward <span>—</span> robe</a>
-                </div>
-                <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
-                    ☰
-                </a>
-            </div>
-            <nav class="navbar-menu">
-                <ul id="hamburger-links" class="hamburger-menu">
-                    <li id="nav-signup" class="nav-item hidden"><a href="signup.html" class="nav-link">Sign up</a></li>
-                    <li id="nav-login" class="nav-item hidden"><a href="login.html" class="nav-link">Login</a></li>
-                    <li id="nav-logout" class="nav-item hidden"><a href="javascript:void(0);" class="nav-link" onclick="logout()">Logout</a></li>
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
-                    <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+        <nav class="navbar-container ">
+            <figure class="navbar-logo">
+                <a href="index.html"><img src="static/assets/icons/Logo-large.svg" alt="Ward -robe logo"></a>
+                <div class="navbar-icons">
+            </figure>
+
+            <div>
+                <ul id="navbar-utility">
+                    <li>
+                        <a href="cart.html">
+                            <img class="" src="static/assets/icons/Icon-shopping bag.svg" alt="Shopping cart icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="" src="static/assets/icons/Icon-account.svg" alt="Account icon">
+                        </a>
+                    </li>
+                    <li>
+                        <button id="hamburgerToggle">
+                            <img class="hamburger-icon" src="static/assets/icons/Icon-hamburger.svg"
+                                alt="hamburger menu icon">
+                        </button>
+                    </li>
                 </ul>
-            </nav>
-        </div>
+
+
+                <nav id="navSecondary" class="nav-secondary hidden anim-dropdown">
+                    <ul>
+                        <li id="nav-signup">
+                            <a href="signup.html" class="button-secondary-small">Sign up</a>
+                        </li>
+                        <li id="nav-login">
+                            <a href="login.html" class="button-primary-small">Login</a>
+                        </li>
+                        <li id="nav-logout" class="nav-item ">
+                            <a href="javascript:void(0);" class="button-primary-small" onclick="logout()">Logout</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+
+
+
     </header>
 
     <body>
@@ -100,7 +125,8 @@
                             <p>We focus on cutting greenhouse gas emissions, reducing the amount of resources we use,
                                 and
                                 improving the lives and livelihoods of the people connected to our business.</p>
-                            <a class="button-primary" href="products.html?category=men%27s%20clothing&category=women%27s%20clothing">
+                            <a class="button-primary"
+                                href="products.html?category=men%27s%20clothing&category=women%27s%20clothing">
                                 shop clothing
                             </a>
                         </div>

@@ -1,15 +1,11 @@
 /* TEMPORARY */
-main{
-    background-color: var(--c-ep-grey);
-}
+
 picture{
  display: block;
  font-size: 0;
 }
 
 .img-container{
-        width: var(--max-vw);
-
         img{
             object-fit: cover;
             width: 100%;
@@ -40,9 +36,8 @@ picture{
         bottom: 25%;
         right: 18%;
         z-index: 20;
-        >*{
-            color: var(--c-lb-white);
-
+        *{
+            color: var(--c-lb-white) !important;
         }
     }
     @media (min-width: 768px) {

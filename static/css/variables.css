@@ -1,11 +1,12 @@
 :root{
 /* Screen sizes */
     /* viewport range used for fluid scaling */
-    --min-vw: 320;  
-    --max-vw: 1200;
+     
+    --max-vw: 95rem;
 
-    --min-vh: 50;  
-    --max-vh: 100;
+    --min-vh: 50vh;  
+    --max-vh: 100vh;
+
 
     /* Prefereable font sizes */
     --h1-pref: calc(3.27px + 7.73vw);
@@ -42,6 +43,8 @@
     --c-feedback-failure: #D41F1C;
     --c-feedback-failure10: #FAF1F1;
     --c-feedback-disabled: #CDCDCD;
+
+    --c--nav-backdrop: #fefefe64;
 
 /* Spacing & Sizing */
     /* Small */
