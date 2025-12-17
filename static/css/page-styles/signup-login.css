@@ -1,0 +1,48 @@
+main {
+    margin: var(--s-2md) var(--s-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--c-lb-white);
+    padding: var(--s-2md) 0 var(--s-2md) 0;
+    border: 2px solid var(--c-tt-green);
+}
+
+main p {
+    font-family: var(--f-medium);
+}
+
+main a {
+    color: var(--c-sp-grey);
+}
+
+input, label {
+    display: block;
+    font-family: var(--f-regular);
+    margin: 0 0 var(--s-2sm) 0;
+}
+input {
+    padding: var(--s-2xs);
+    margin: var(--s-2xs) 0 0 0;
+    width: 100%;
+}
+input:focus {
+    outline: none;
+    border: 2.5px solid var(--c-sp-grey);
+}
+
+h1 {
+    margin: 0 0 var(--s-2md) 0
+}
+
+button {
+    padding: var(--s-xs) var(--s-lg);
+    background-color: var(--c-tt-green);
+    border: 2px solid var(--c-tt-green);
+    font-size: var(--s-sm);
+    cursor: pointer;
+    font-family: var(--f-regular);
+    margin: 0 0 var(--s-2md) 0
+}

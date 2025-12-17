@@ -7,7 +7,9 @@
     <title>Ward-robe | Home</title>
     <link rel="stylesheet" href="./static/css/page-styles/index.css">
     <link rel="stylesheet" href="./static/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="static/assets/icons/favicon.png">
     <script src="static/js/nav.js" defer></script>
+    <script src="static/js/auth.js" defer></script>
 </head>
 
 <body>
@@ -24,8 +26,9 @@
             </div>
             <nav class="navbar-menu">
                 <ul id="hamburger-links" class="hamburger-menu">
-                    <li class="nav-item hidden"><a href="signup.html" class="nav-link">Sign up</a></li>
-                    <li class="nav-item hidden"><a href="login.html" class="nav-link">Login</a></li>
+                    <li id="nav-signup" class="nav-item hidden"><a href="signup.html" class="nav-link">Sign up</a></li>
+                    <li id="nav-login" class="nav-item hidden"><a href="login.html" class="nav-link">Login</a></li>
+                    <li id="nav-logout" class="nav-item hidden"><a href="javascript:void(0);" class="nav-link" onclick="logout()">Logout</a></li>
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
                     <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
@@ -42,7 +45,7 @@
                     <h1>new arrivals</h1>
                 </header>
                 <div class="hero-blur-box"></div>
-                <div class="hero-img-container img-container">
+                <figure class="hero-img-container img-container">
                     <picture>
                         <source srcset="static/assets/images/large/ward-robe-hero-large.avif"
                             media="(min-width: 1024px)">
@@ -51,11 +54,12 @@
                         <img loading="lazy" src="static/assets/images/small/ward-robe-hero-small.avif"
                             alt="Black and white image, Ward -robe hero image, model looking directly into camera, wearing a t-shirt on a grey background">
                     </picture>
-                </div>
+                </figure>
             </section>
+
             <section>
                 <header class="category-header">
-                    <h2><a href="products.html?category=clothing">Clothing <img
+                    <h2><a href="products.html?category=men%27s%20clothing&category=women%27s%20clothing">Clothing <img
                                 src="static/assets/icons/Icon-arrow-diag-up.svg" alt="Icon, arrow up"></a></h2>
                 </header>
                 <section class="category-box-container">
@@ -63,40 +67,40 @@
                         <header class="category-label">
                             <h3>men's clothing</h3>
                         </header>
-                        <div class="img-container category-box">
-                            <a href="products.html?category=mens-clothing">
+                        <figure class="img-container category-box">
+                            <a href="products.html?category=men%27s%20clothing">
                                 <picture>
                                     <img loading="lazy" src="static/assets/images/medium/category-backdrop-mens.avif"
                                         alt="Product image">
                                 </picture>
                             </a>
-                        </div>
+                        </figure>
                     </article>
 
                     <article class="category-box-item category-2">
                         <header class="category-label">
                             <h3>womens's clothing</h3>
                         </header>
-                        <div class="img-container category-box">
-                            <a href="products.html?category=mens-clothing">
+                        <figure class="img-container category-box">
+                            <a href="products.html?category=women%27s%20clothing">
                                 <picture>
                                     <img loading="lazy" src="static/assets/images/medium/category-backdrop-womens.avif"
                                         alt="Product image">
                                 </picture>
                             </a>
-                        </div>
+                        </figure>
                     </article>
 
                     <article class="category-text-content">
 
-                        <h4>We’ve worked with sustainability for over 30 years, changing how we design and produce
-                            products, as well as how we run our business. It’s complex, progress can be slow and we
-                            don’t have all the answers yet, but we stay committed to learning and adapting.</h4>
+                        <h4>We've worked with sustainability for over 30 years, changing how we design and produce
+                            products, as well as how we run our business. It's complex, progress can be slow and we
+                            don't have all the answers yet, but we stay committed to learning and adapting.</h4>
                         <div class="category-text-container">
                             <p>We focus on cutting greenhouse gas emissions, reducing the amount of resources we use,
                                 and
                                 improving the lives and livelihoods of the people connected to our business.</p>
-                            <a class="button-primary" href="products.html?category=clothing">
+                            <a class="button-primary" href="products.html?category=men%27s%20clothing&category=women%27s%20clothing">
                                 shop clothing
                             </a>
                         </div>
@@ -105,7 +109,7 @@
 
                 </section>
                 <header class="category-header">
-                    <h2><a href="products.html?category=clothing">Techs and Jewels <img
+                    <h2><a href="products.html?category=jewelery&category=electronics">Techs and Jewels <img
                                 src="static/assets/icons/Icon-arrow-diag-up.svg" alt="Icon, arrow up"></a></h2>
                 </header>
                 <section class="category-box-container">
@@ -114,7 +118,7 @@
                             <h3>jewelery</h3>
                         </header>
                         <div class="img-container category-box">
-                            <a href="products.html?category=mens-clothing">
+                            <a href="products.html?category=jewelery">
                                 <picture>
                                     <img loading="lazy" src="static/assets/images/medium/category-backdrop-jewels.avif"
                                         alt="Product image">
@@ -128,7 +132,7 @@
                             <h3>tech</h3>
                         </header>
                         <div class="img-container category-box">
-                            <a href="products.html?category=mens-clothing">
+                            <a href="products.html?category=electronics">
                                 <picture>
                                     <img loading="lazy" src="static/assets/images/medium/category-backdrop-techs.avif"
                                         alt="Product image">
@@ -143,9 +147,9 @@
                             why we set clear ambitions and bold goals.</h4>
                         <div class="category-text-container">
                             <p>In a world with finite resources, we need to change the way we make everything, including
-                                fashion. For many years, we aimed to use the most sustainable materials to make the most
+                                fashion. For many years, we aimed to use the most sustainable materials to make the most
                                 desirable pieces.</p>
-                            <a class="button-primary" href="products.html?category=clothing">
+                            <a class="button-primary" href="products.html?category=jewelery&category=electronics">
                                 shop techs and jewels
                             </a>
                         </div>
@@ -170,7 +174,7 @@
                     <ul>
                         <li><a href="#">Account</a></li>
                         <li><a href="cart.html">Basket</a></li>
-                        <li><a href="login.html">Log in</a></li>
+                        <li><a id="footer-auth-link" href="login.html">Log in</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">

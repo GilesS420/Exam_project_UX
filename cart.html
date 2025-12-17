@@ -7,7 +7,9 @@
     <title>Ward-robe | Shopping Cart</title>
     <link rel="stylesheet" href="../static/css/styles.css">
     <link rel="stylesheet" href="../static/css/page-styles/cart.css">
+    <link rel="icon" type="image/x-icon" href="static/assets/icons/favicon.png">
     <script src="static/js/nav.js" defer></script>
+    <script src="static/js/auth.js" defer></script>
     <script src="static/js/cart.js" defer></script>
 </head>
 
@@ -25,8 +27,9 @@
             </div>
             <nav class="navbar-menu">
                 <ul id="hamburger-links" class="hamburger-menu">
-                    <li class="nav-item hidden"><a href="signup.html" class="nav-link">Sign up</a></li>
-                    <li class="nav-item hidden"><a href="login.html" class="nav-link">Login</a></li>
+                    <li id="nav-signup" class="nav-item hidden"><a href="signup.html" class="nav-link">Sign up</a></li>
+                    <li id="nav-login" class="nav-item hidden"><a href="login.html" class="nav-link">Login</a></li>
+                    <li id="nav-logout" class="nav-item hidden"><a href="javascript:void(0);" class="nav-link" onclick="logout()">Logout</a></li>
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
                     <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
@@ -100,7 +103,7 @@
                 <ul>
                     <li><a href="#">Account</a></li>
                     <li><a href="cart.html">Basket</a></li>
-                    <li><a href="login.html">Log in</a></li>
+                    <li><a id="footer-auth-link" href="login.html">Log in</a></li>
                 </ul>
             </div>
             <div class="footer-section">

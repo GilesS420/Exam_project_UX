@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ward-robe | Shopping Cart</title>
     <link rel="stylesheet" href="../static/css/styles.css">
-    <link rel="stylesheet" href="../static/css/variables.css">
-    <link rel="stylesheet" href="../static/css/components/navigation.css">
-    <link rel="stylesheet" href="../static/css/components/footer.css">
+    <link rel="stylesheet" href="../static/css/page-styles/order-confirmation.css">
+    <link rel="icon" type="image/x-icon" href="static/assets/icons/favicon.png">
     <script src="static/js/nav.js" defer></script>
+    <script src="static/js/auth.js" defer></script>
 </head>
 
 <body>
@@ -26,8 +26,9 @@
             </div>
             <nav class="navbar-menu">
                 <ul id="hamburger-links" class="hamburger-menu">
-                    <li class="nav-item hidden"><a href="signup.html" class="nav-link">Sign up</a></li>
-                    <li class="nav-item hidden"><a href="login.html" class="nav-link">Login</a></li>
+                    <li id="nav-signup" class="nav-item hidden"><a href="signup.html" class="nav-link">Sign up</a></li>
+                    <li id="nav-login" class="nav-item hidden"><a href="login.html" class="nav-link">Login</a></li>
+                    <li id="nav-logout" class="nav-item hidden"><a href="javascript:void(0);" class="nav-link" onclick="logout()">Logout</a></li>
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
                     <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
@@ -41,7 +42,7 @@
         <h1>Thank you for your order!</h1>
         <p>Your purchase was successful.</p>
 
-        <a href="products.html">Continue Shopping</a>
+        <a href="products.html" class="btn btn-primary">Continue Shopping</a>
     </main>
 
     <!-- Footer -->
@@ -58,7 +59,7 @@
                 <ul>
                     <li><a href="#">Account</a></li>
                     <li><a href="cart.html">Basket</a></li>
-                    <li><a href="login.html">Log in</a></li>
+                    <li><a id="footer-auth-link" href="login.html">Log in</a></li>
                 </ul>
             </div>
             <div class="footer-section">
