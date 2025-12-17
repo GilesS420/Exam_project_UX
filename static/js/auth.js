@@ -97,17 +97,5 @@
         }
       });
     }
-    const addToCart = $('#add-to-cart-btn');
-    if (addToCart) {
-      addToCart.addEventListener('click', function (e) {
-        const current = localStorage.getItem(CURRENT_KEY);
-        if (!current) {
-          e.preventDefault();
-          const ret = window.location.pathname + window.location.search + window.location.hash;
-          localStorage.setItem('returnTo', ret);
-          window.location.href = 'login.html?next=' + encodeURIComponent(ret);
-        }
-      });
-    }
   });
 })();
