@@ -1,0 +1,95 @@
+#checkout-form{
+    background-color: var(--c-lb-white);
+    padding: var(--s-md) var(--s-sm);
+    
+    fieldset{
+        padding: var(--s-md);
+        margin-bottom: var(--s-2sm);
+    }
+    .checkout-form-dual{
+        display: flex;
+        flex-direction: column;
+    }
+    .checkout-form-item{
+        display: flex;
+        flex-direction: column;
+        width: var(--s-80);
+        margin-bottom: var(--s-sm);
+        label{
+            font-family: var(--f-regular);
+            font-size: clamp(var(--s-sm), var(--body-pref), var(--s-2sm));
+            font-weight: var(--fw-light);
+            line-height: var(--lh-default);
+            color: var(--c-cc-black);
+        }
+    }
+    input{
+            border: var(--s-4xs) solid var(--c-sp-grey);
+            width: var(--s-full);
+            padding: var(--s-2xs) var(--s-2xs);
+            font-family: var(--f-regular);
+            color: var(--c-cc-black);
+            font-weight: var(--fw-regular);
+            
+            &.short-input{
+                max-width: var(--s-xl);
+            }
+            &:focus{
+                outline-color: var(--c-cc-black);
+            }
+        }
+    legend{
+        font-family: var(--f-regular);
+        font-size: clamp(var(--s-2sm), var(--h4-pref), var(--s-2md));
+        font-weight: var(--fw-regular);
+        line-height: var(--lh-default);
+        color: var(--c-cc-black);
+        padding-inline: var(--s-xs);
+    }
+}
+/* TEMP */
+.button-primary{
+    background-color: var(--c-tt-green);
+    font-size: clamp(var(--s-2sm), var(--h4-pref), var(--s-2md));
+    font-weight: var(--fw-regular);
+    font-family: var(--f-regular);
+    color: var(--c-cc-black);
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: var(--s-xs);
+    border: none;
+    cursor: pointer;
+}
+@media (min-width: 500px) {
+    #checkout-form{
+        padding: var(--s-md) var(--s-md);
+        .checkout-form-dual{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        input{
+            width: var(--s-4xl);
+        }
+        fieldset{
+            padding: var(--s-md) var(--s-3md);
+            
+        }
+    }
+}
+@media (min-width: 768px) {
+    #checkout-form{
+
+        input{
+            width: var(--s-80);
+        }
+    }
+
+    }
+
+@media (min-width: 1024px) {
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

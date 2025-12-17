@@ -45,6 +45,7 @@
 
 /* Spacing & Sizing */
     /* Small */
+    --s-4xs: 1px;
     --s-3xs: .125rem;
     --s-2xs: .25rem;
     --s-xs: .5rem;
@@ -63,6 +64,7 @@
     --s-2xl: 6rem;
     --s-3xl: 8rem;
     --s-4xl: 10rem;
+    --s-30: 30%;
     --s-50: 50%;
     --s-60: 60%;
     --s-80: 80%;
