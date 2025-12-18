@@ -1,4 +1,3 @@
-// document.querySelector("#login-form").addEventListener("submit", loginHandler);
 export async function loginHandler(e) {
   e.preventDefault();
   const JSON_SERVER = 'http://localhost:3000/users';

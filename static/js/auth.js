@@ -1,52 +1,16 @@
 import { loginHandler } from "./login.js";
 import { signupHandler } from "./signup.js";
-// document.querySelector("#signup-form").addEventListener("submit", signupHandler);
-// document.querySelector("#login-form").addEventListener("submit", loginHandler);
 
 (function () {
   const $ = (sel) => document.querySelector(sel);
   const USERS_KEY = 'users_map';
   const CURRENT_KEY = 'currentUser';
   
-  // function loadUsers() {
-  //   try { return JSON.parse(localStorage.getItem(USERS_KEY) || '{}'); }
-  //   catch (e) { return {}; }
-  // }
-  
-  // function saveUsers(users) {
-  //   localStorage.setItem(USERS_KEY, JSON.stringify(users));
-  // }
-  
   function setCurrent(email) {
     if (email) localStorage.setItem(CURRENT_KEY, email);
     else localStorage.removeItem(CURRENT_KEY);
     updateNav();
   }
-  
-  
-
-
-  // function loginHandler(evt) {
-  //   evt.preventDefault();
-  //   const emailEl = $('#login-email');
-  //   const passEl = $('#login-password');
-  //   const email = emailEl && emailEl.value.trim().toLowerCase();
-  //   const pass = passEl && passEl.value;
-  //   if (!email || !pass) return alert('Please enter email and password.');
-  //   const users = loadUsers();
-  //   const user = users[email];
-  //   if (!user || user.password !== btoa(pass)) return alert('Invalid email or password.');
-  //   setCurrent(email);
-  //   // after login redirect to next if present
-  //   const params = new URLSearchParams(window.location.search);
-  //   const next = params.get('next') || localStorage.getItem('returnTo');
-  //   if (next) {
-  //     localStorage.removeItem('returnTo');
-  //     window.location.href = decodeURIComponent(next);
-  //   } else {
-  //     window.location.href = 'index.html';
-  //   }
-  // }
 
   function logout() {
     setCurrent(null);
@@ -85,18 +49,5 @@ import { signupHandler } from "./signup.js";
     if (signupForm) signupForm.addEventListener('submit', signupHandler);
     const loginForm = $('#login-form');
     if (loginForm) loginForm.addEventListener('submit', loginHandler);
-    // Intercept actions that require authentication
-    //const checkoutBtn = $('#checkout-button');
-    // if (checkoutBtn) {
-    //   checkoutBtn.addEventListener('click', function (e) {
-    //     const current = localStorage.getItem(CURRENT_KEY);
-    //     if (!current) {
-    //       // remember target and redirect to login
-    //       const ret = window.location.pathname + window.location.search + window.location.hash;
-    //       localStorage.setItem('returnTo', ret);
-    //       window.location.href = 'login.html?next=' + encodeURIComponent(ret);
-    //     }
-    //   });
-    // }
   });
 })();
