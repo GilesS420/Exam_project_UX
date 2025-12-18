@@ -2,7 +2,6 @@
     background-color: var(--c-sp-grey);
     padding: var(--s-xl) var(--s-2md);
     padding-bottom: var(--s-sm);
-    margin-top: var(--s-xl);
     .footer-container{
         display: flex;
         flex-direction: column;
@@ -16,7 +15,6 @@
                 font-family: var(--f-regular);
                 font-size: clamp(var(--s-2sm), var(--h4-pref), var(--s-2md));
                 font-weight: var(--fw-regular);
-                text-transform: lowercase;
                 line-height: var(--lh-default);
                 text-decoration: none;
                 &:hover{
@@ -30,7 +28,7 @@
         .footer-container{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            max-width: var(--s-80);
+            max-width: var(--max-vw);
             margin-inline: auto;
             .footer-section ul{
                 margin-left: var(--s-xl);
@@ -40,6 +38,8 @@
     .footer-bottom{
         padding-top: var(--s-xl);
         color: var(--c-lb-white);
+        max-width: var(--max-vw);
+        margin: auto;
 
     }
 }

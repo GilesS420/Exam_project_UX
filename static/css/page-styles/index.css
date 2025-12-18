@@ -121,7 +121,6 @@ picture{
 }
 
 .category-header {
-    margin-top: var(--s-xl);
     margin-bottom: var(--s-xs);
     h2 a{
         color: var(--c-cc-black);
@@ -131,17 +130,5 @@ picture{
             text-decoration: underline;
         }
     }
-
 }
 
-.button-primary{
-    background-color: var(--c-tt-green);
-    font-size: clamp(var(--s-2sm), var(--h4-pref), var(--s-2md));
-    font-weight: var(--fw-regular);
-    font-family: var(--f-regular);
-    color: var(--c-cc-black);
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    padding: var(--s-xs)
-}

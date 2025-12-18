@@ -3,6 +3,7 @@
     top: 0;
     z-index: 100;
     width: var(--s-full);
+    height: var(--s-xl);
     padding: var(--s-sm);
     background-color: var(--c--nav-backdrop);
     .navbar-logo{
@@ -61,7 +62,6 @@
     }
 }
 @media (min-width: 786px) {
-
     .navbar .navbar-container{
         #navbar-utility{
             gap: var(--s-md);
@@ -69,11 +69,11 @@
         }
     }
 }
-
-/* Hamburger menu */
-/* .hamburger-menu {
-    display: none;
-} */
+@media (min-width: 1024px) {
+    .navbar .navbar-container{
+        padding-inline: var(--s-sm);
+    }
+}
 
 .anim-dropdown{
     animation-name: dropdown_kf;

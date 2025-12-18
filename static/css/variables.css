@@ -1,11 +1,10 @@
 :root{
 /* Screen sizes */
-    /* viewport range used for fluid scaling */
-     
+    /* Max width on content in main and navigation */
     --max-vw: 95rem;
 
-    --min-vh: 50vh;  
-    --max-vh: 100vh;
+    /* --min-vh: 50vh;  
+    --max-vh: 100vh; */
 
 
     /* Prefereable font sizes */

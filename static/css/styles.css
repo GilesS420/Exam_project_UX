@@ -15,6 +15,22 @@
 
 body {
     background-color: var(--c-ep-grey);
+    main{
+        max-width: var(--max-vw);
+        margin: auto;
+        > .main-content{
+            padding: var(--s-2xl) var(--s-sm);
+            @media (min-width: 500px) {
+                padding: var(--s-2xl) var(--s-md);  
+            }
+            @media (min-width: 768px) {
+                padding: var(--s-2xl) var(--s-xl);  
+            }
+            @media (min-width: 1024px) {
+                padding: var(--s-3xl) var(--s-xl);  
+            }
+        }
+    }
 }
 
 h1{
@@ -73,6 +89,35 @@ p.small{
     color: var(--c-cc-black);
 }
 
+/* Buttons */
+.button-primary{
+    background-color: var(--c-tt-green);
+    font-size: clamp(var(--s-2sm), var(--h4-pref), var(--s-2md));
+    font-weight: var(--fw-regular);
+    font-family: var(--f-regular);
+    color: var(--c-cc-black);
+    text-align: center;
+    text-decoration: none;
+    width: var(--s-full);
+    padding: var(--s-xs);
+    border: none;
+    cursor: pointer;
+}
+
+.button-secondary{
+    background-color: var(--c-cc-black);
+    font-size: clamp(var(--s-2sm), var(--h4-pref), var(--s-2md));
+    font-weight: var(--fw-regular);
+    font-family: var(--f-regular);
+    color: var(--c-lb-white);
+    text-align: center;
+    text-decoration: none;
+    width: var(--s-full);
+    padding: var(--s-xs);
+    border: none;
+    cursor: pointer;
+}
+
 .button-primary-small{
     background-color: var(--c-tt-green);
     font-size: clamp(var(--s-sm), var(--body-pref), var(--s-2sm));
@@ -93,7 +138,7 @@ p.small{
     color: var(--c-ep-grey);
     text-align: center;
     text-decoration: none;
-    width: 100%;
+    width: var(--s-full);
     padding: var(--s-xs);
     border: none;
     cursor: pointer;
@@ -103,16 +148,3 @@ p.small{
     margin: auto;
 } */
  
-.button-primary{
-    background-color: var(--c-tt-green);
-    font-size: clamp(var(--s-2sm), var(--h4-pref), var(--s-2md));
-    font-weight: var(--fw-regular);
-    font-family: var(--f-regular);
-    color: var(--c-cc-black);
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    padding: var(--s-xs);
-    border: none;
-    cursor: pointer;
-}

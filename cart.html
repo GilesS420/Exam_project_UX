@@ -59,54 +59,56 @@
     </header>
 
     <!-- Main content -->
-    <main class="main-content">
+    <main class="">
+        <section class="main-content">
+            <h1>My cart</h1>
+            <div class="cart-container">
+                <section class="cart-content">
+                    <ul id="cart_items_list">
 
-        <div class="cart-container">
-            <section class="cart-content">
-                <ul id="cart_items_list">
+                    </ul>
+                    <template id="template_cart_item">
+                        <li class="cart-item">
+                            <article>
+                                <figure class="img-container">
+                                    <img src="" alt="">
+                                </figure>
 
-                </ul>
-                <template id="template_cart_item">
-                    <li class="cart-item">
-                        <article>
-                            <figure class="img-container">
-                                <img src="" alt="">
-                            </figure>
-
-                            <div class="cart-item-details">
-                                <h4 class="cart-item-title"></h4>
-                                <div class="cart-item-quantity-container">
-                                    <p class="cart-item-quantity"></p>
-                                    <p class="cart-item-price"></p>
+                                <div class="cart-item-details">
+                                    <h4 class="cart-item-title"></h4>
+                                    <div class="cart-item-quantity-container">
+                                        <p class="cart-item-quantity"></p>
+                                        <p class="cart-item-price"></p>
+                                    </div>
+                                    <div class="cart-item-button-container">
+                                        <button class="cart-item-remove button-secondary-small" type="button">
+                                            Remove
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="cart-item-button-container">
-                                    <button class="cart-item-remove button-secondary-small" type="button">
-                                        Remove
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-                    </li>
-                </template>
-            </section>
-            <aside class="cart-summary">
-
-                <section class="cart-cta-container">
-                    <button id="checkout-button" class="button-primary">Proceed to checkout</button>
-                    <p class="em">or</p>
-                    <a href="products.html" class="button-secondary-small">Continue Shopping</a>
+                            </article>
+                        </li>
+                    </template>
                 </section>
+                <aside class="cart-summary">
 
-                <section>
-                    <header>
-                        <h2>Order summary</h2>
-                    </header>
-                    <h3>Subtotal: <span class="subtotal"></span></h3>
-                    <p>Items total: <span class="itemstotal"></span></p>
-                </section>
+                    <section class="cart-cta-container">
+                        <button id="checkout-button" class="button-primary">Proceed to checkout</button>
+                        <p class="em">or</p>
+                        <a href="products.html" class="button-secondary-small">Continue Shopping</a>
+                    </section>
 
-            </aside>
-        </div>
+                    <section>
+                        <header>
+                            <h2>Order summary</h2>
+                        </header>
+                        <h3>Subtotal: <span class="subtotal"></span></h3>
+                        <p>Items total: <span class="itemstotal"></span></p>
+                    </section>
+
+                </aside>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
