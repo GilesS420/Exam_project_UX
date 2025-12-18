@@ -1,22 +1,3 @@
-/* main {
-    margin: var(--s-2md) var(--s-xl);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: var(--c-lb-white);
-    padding: var(--s-2md) 0 var(--s-2md) 0;
-    border: 2px solid var(--c-tt-green);
-}
-
-main p {
-    font-family: var(--f-medium);
-}
-
-main a {
-    color: var(--c-sp-grey);
-} */
 
 .form{
     background-color: var(--c-lb-white);
@@ -25,6 +6,7 @@ main a {
     fieldset{
         padding: var(--s-md);
         margin-bottom: var(--s-2sm);
+        border: solid 1px var(--c-ep-grey);
     }
     .form-dual{
         display: flex;
@@ -65,5 +47,20 @@ main a {
         line-height: var(--lh-default);
         color: var(--c-cc-black);
         padding-inline: var(--s-xs);
+    }
+}
+.splash{
+    margin-block: var(--s-sm) var(--s-md);
+}
+@media (min-width: 768px) {
+    .main-content{
+        max-width: var(--s-80);
+        margin: auto;
+    }
+}
+
+@media (min-width:1024px) {
+    .main-content{
+        max-width: var(--s-50);
     }
 }

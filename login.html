@@ -58,41 +58,27 @@
   </header>
 
   <main>
-    <h1>Login</h1>
+    <section class="main-content">
+      <h1>Login</h1>
+      <p class="splash">Don't have an account? <a class="hyperlink" href="signup.html">Sign up</a></p>
 
-    <form id="login-form" class="form" novalidate>
-      <fieldset>
-        <legend>Log into your account</legend>
-        <div class="form-item">
-          <label for="login-email">Email*</label>
-          <input type="email" name="email" id="login-email" value="silver@email.com" required>
-        </div>
-        <div class="form-item">
-          <label for="login-password">Password*</label>
-          <input type="password" name="password" id="login-password" value="password" required>
-        </div>
+      <form id="login-form" class="form" novalidate>
+        <fieldset>
+          <legend>Log into your account</legend>
+          <div class="form-item">
+            <label for="login-email">Email*</label>
+            <input type="email" name="email" id="login-email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+          </div>
+          <div class="form-item">
+            <label for="login-password">Password*</label>
+            <input type="password" name="password" id="login-password" placeholder="" required>
+          </div>
 
-      </fieldset>
-      <button class="button-primary">Log in</button>
-    </form>
+        </fieldset>
+        <button class="button-primary">Log in</button>
+      </form>
 
-    <!-- <form id="login-form" novalidate>
-
-      <label>
-        Email
-        <input type="email" name="email" id="login-email" required>
-      </label>
-
-      <label>
-        Password
-        <input type="password" name="password" id="login-password" required>
-      </label>
-
-      <button type="submit">Log in</button>
-    </form>
-
-    <p>Don't have an account? <a href="signup.html">Sign up</a></p> -->
-
+    </section>
   </main>
 
   <!-- Footer -->

@@ -60,78 +60,81 @@
 
     <!-- Main content -->
     <main>
-        <section>
+        <section class="main-content">
+            <section class="checkout-info">
 
-            <head>
-                <h1>Checkout</h1>
-            </head>
+                <head>
+                    <h1>Checkout</h1>
+                </head>
+                <p>Please enter your personal, shipping and payment details</p>
+            </section>
+            <aside>
+                <form id="checkout-form">
+                    <fieldset>
+                        <legend>Personal information</legend>
+                        <div class="checkout-form-dual">
+                            <div class="checkout-form-item">
+                                <label for="personalFirstName">First name </label>
+                                <input type="text" name="personalFname" id="personalFname">
+                            </div>
+                            <div class="checkout-form-item">
+                                <label for="deliveryCity">Surname </label>
+                                <input type="text" name="personalLastName" id="personalLastName">
+                            </div>
+                        </div>
+                        <div class="checkout-form-dual">
+                            <div class="checkout-form-item">
+                                <label for="personalEmail">Email </label>
+                                <input type="email" name="personalEmail" id="personalEmail">
+                            </div>
+                            <div class="checkout-form-item">
+                                <label for="personalPhone">Phone </label>
+                                <input type="tel" name="personalPhone" id="personalPhone">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Delivery Address</legend>
+                        <div class="checkout-form-item">
+                            <label for="deliveryStreet">Street Address: </label>
+                            <input type="text" name="deliveryStreet" id="deliveryStreet">
+                        </div>
+                        <div class="checkout-form-dual">
+                            <div class="checkout-form-item">
+                                <label for="deliveryCity">City: </label>
+                                <input type="text" name="deliveryCity" id="deliveryCity">
+                            </div>
+                            <div class="checkout-form-item">
+                                <label for="deliveryZip">Zip code: </label>
+                                <input type="text" name="deliveryZip" id="deliveryZip">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Card details</legend>
+                        <div class="checkout-form-item">
+                            <label for="paymentCardnumber">Credit Card Number: </label>
+                            <input type="text" name="paymentCardnumber" id="paymentCardnumber">
+                        </div>
+                        <div class="checkout-form-dual">
+                            <div class="checkout-form-item">
+                                <label for="paymentExpiry">Expiration Date: </label>
+                                <input type="month" name="paymentExpiry" id="paymentExpiry">
+                            </div>
+                            <div class="checkout-form-item">
+                                <label for="paymentCvv">CVV: </label>
+                                <input class="short-input" type="text" name="paymentCvv" id="paymentCvv">
+                            </div>
+                        </div>
+                    </fieldset>
+
+
+                    <button class="button-primary" type="submit">Confirm Order</button>
+                </form>
+            </aside>
         </section>
-        <aside>
-            <form id="checkout-form">
-                <fieldset>
-                    <legend>Personal information</legend>
-                    <div class="checkout-form-dual">
-                        <div class="checkout-form-item">
-                            <label for="personalFirstName">First name </label>
-                            <input type="text" name="personalFname" id="personalFname">
-                        </div>
-                        <div class="checkout-form-item">
-                            <label for="deliveryCity">Surname </label>
-                            <input type="text" name="personalLastName" id="personalLastName">
-                        </div>
-                    </div>
-                    <div class="checkout-form-dual">
-                        <div class="checkout-form-item">
-                            <label for="personalEmail">Email </label>
-                            <input type="email" name="personalEmail" id="personalEmail">
-                        </div>
-                        <div class="checkout-form-item">
-                            <label for="personalPhone">Phone </label>
-                            <input type="tel" name="personalPhone" id="personalPhone">
-                        </div>
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Delivery Address</legend>
-                    <div class="checkout-form-item">
-                        <label for="deliveryStreet">Street Address: </label>
-                        <input type="text" name="deliveryStreet" id="deliveryStreet">
-                    </div>
-                    <div class="checkout-form-dual">
-                        <div class="checkout-form-item">
-                            <label for="deliveryCity">City: </label>
-                            <input type="text" name="deliveryCity" id="deliveryCity">
-                        </div>
-                        <div class="checkout-form-item">
-                            <label for="deliveryZip">Zip code: </label>
-                            <input type="text" name="deliveryZip" id="deliveryZip">
-                        </div>
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Card details</legend>
-                    <div class="checkout-form-item">
-                        <label for="paymentCardnumber">Credit Card Number: </label>
-                        <input type="text" name="paymentCardnumber" id="paymentCardnumber">
-                    </div>
-                    <div class="checkout-form-dual">
-                        <div class="checkout-form-item">
-                            <label for="paymentExpiry">Expiration Date: </label>
-                            <input type="month" name="paymentExpiry" id="paymentExpiry">
-                        </div>
-                        <div class="checkout-form-item">
-                            <label for="paymentCvv">CVV: </label>
-                            <input class="short-input" type="text" name="paymentCvv" id="paymentCvv">
-                        </div>
-                    </div>
-                </fieldset>
-
-
-                <button class="button-primary" type="submit">Confirm Order</button>
-            </form>
-        </aside>
     </main>
 
     <!-- Footer -->

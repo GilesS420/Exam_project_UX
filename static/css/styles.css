@@ -89,6 +89,19 @@ p.small{
     color: var(--c-cc-black);
 }
 
+.hyperlink{
+    font-family: var(--f-medium);
+    font-size: clamp(var(--s-sm), var(--body-pref), var(--s-2sm));
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-default);
+    color: var(--c-cc-black);
+    text-decoration: underline;
+    &:hover{
+        text-decoration: none;
+        color: var(--c-sp-grey);
+    }
+}
+
 /* Buttons */
 .button-primary{
     background-color: var(--c-tt-green);
