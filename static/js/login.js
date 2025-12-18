@@ -1,5 +1,5 @@
-document.querySelector("#login-form").addEventListener("submit", loginHandler);
-async function loginHandler(e) {
+// document.querySelector("#login-form").addEventListener("submit", loginHandler);
+export async function loginHandler(e) {
   e.preventDefault();
   const JSON_SERVER = 'http://localhost:3000/users';
 
@@ -7,20 +7,26 @@ async function loginHandler(e) {
   const email = form.querySelector("#login-email").value.trim().toLowerCase();
   const password = form.querySelector("#login-password").value;
 
+    if (!form.checkValidity()) {
+        form.reportValidity(); 
+        return;
+    }
+
   if (!email || !password) return alert("Please enter email and password.");
   try {
-    // Fetch user by email
+    // get user by their email
     const response = await fetch(`${JSON_SERVER}?email=${encodeURIComponent(email)}`);
-    const [user] = await response.json(); // json-server returns an array
+    // json-server returns an array
+    const [user] = await response.json(); 
 
     if (!user || user.password !== password) {
       return alert("Invalid email or password.");
     }
 
-    // Save to localStorage
+    // save user to localStorage
     localStorage.setItem("currentUser", JSON.stringify({ email: user.email, name: user.name }));
 
-    // Redirect
+    // send back, chatgpt helped here
     const params = new URLSearchParams(window.location.search);
     const next = params.get("next") || localStorage.getItem("returnTo");
     if (next) {

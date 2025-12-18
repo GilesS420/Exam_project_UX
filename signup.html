@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="static/css/styles.css">
   <link rel="icon" type="image/x-icon" href="static/assets/icons/favicon.png">
   <script type="module" src="static/js/auth.js" defer></script>
-  <script src="static/js/signup.js" defer></script>
+  <script type="module" src="static/js/signup.js" defer></script>
   <script src="static/js/nav.js" defer></script>
 </head>
 
@@ -67,19 +67,32 @@
           <legend>Create an account</legend>
           <div class="form-item">
             <label for="signup-name">Full name*</label>
-            <input type="text" name="name" id="signup-name" required>
+            <input type="text" name="name" id="signup-name" placeholder="e.g. Anders Andersen" required>
           </div>
           <div class="form-item">
             <label for="signup-email">Email*</label>
-            <input type="email" name="email" id="signup-email" required>
+            <input type="email" name="email" id="signup-email" placeholder="e.g. email@domain.com"
+              pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
           </div>
           <div class="form-item">
             <label for="signup-password">Password*</label>
-            <input type="password" name="password" id="signup-password" required>
+            <input type="password" name="password" id="signup-password"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,20}$" required>
+
           </div>
           <div class="form-item">
             <label for="signup-repeat-password">Repeat password*</label>
-            <input type="password" name="repeatPassword" id="signup-repeat-password" required>
+            <input type="password" name="repeatPassword" id="signup-repeat-password"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,20}$"
+              title="8–20 chars, incl. upper/lowercase, number & special character" required>
+            <p class="small">The password must contain or include at least:</p>
+            <ul class="pass-requirements">
+              <li>8–20 characters</li>
+              <li>one lowercase letter</li>
+              <li>one uppercase letter</li>
+              <li>one number</li>
+              <li>one special character</li>
+            </ul>
           </div>
         </fieldset>
         <button class="button-primary">Create account</button>

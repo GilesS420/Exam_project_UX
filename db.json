@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "id": "4753",
-      "name": "Joris",
-      "email": "joris@email.com",
-      "password": "password"
-    },
-    {
       "id": "0242",
       "name": "sigrid",
       "email": "sigrid@email.com",
@@ -17,6 +11,24 @@
       "name": "silver",
       "email": "silver@email.com",
       "password": "password"
+    },
+    {
+      "id": "c5f0",
+      "name": "Joris",
+      "email": "email@emaul.com",
+      "password": "password"
+    },
+    {
+      "id": "eb15",
+      "name": "Joris",
+      "email": "email@email",
+      "password": "password"
+    },
+    {
+      "id": "aaa1",
+      "name": "Joris",
+      "email": "joris@email.com",
+      "password": "Aa1!secure"
     }
   ]
 }

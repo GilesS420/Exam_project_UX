@@ -52,6 +52,15 @@
 .splash{
     margin-block: var(--s-sm) var(--s-md);
 }
+.pass-requirements{
+    margin-top: var(--s-xs);
+    font-family: var(--f-regular);
+    color: var(--c-cc-black);
+    li{
+        list-style: circle;
+        margin-left: var(--s-2sm);
+    }
+}
 @media (min-width: 768px) {
     .main-content{
         max-width: var(--s-80);

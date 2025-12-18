@@ -3,6 +3,12 @@ export async function signupHandler(e) {
 
     const formInput = e.target;
     const JSON_SERVER = 'http://localhost:3000/users';
+
+    // Chatgpt suggested this
+    if (!formInput.checkValidity()) {
+        formInput.reportValidity(); 
+        return;
+    }
     
     // check if the user password repeated matches
     if (formInput.password.value !== formInput.repeatPassword.value) {

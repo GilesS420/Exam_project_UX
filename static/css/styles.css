@@ -115,6 +115,9 @@ p.small{
     padding: var(--s-xs);
     border: none;
     cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 .button-secondary{
@@ -129,6 +132,9 @@ p.small{
     padding: var(--s-xs);
     border: none;
     cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 .button-primary-small{
@@ -140,7 +146,10 @@ p.small{
     text-align: center;
     text-decoration: none;
     width: var(--s-full);
-    padding: var(--s-xs)
+    padding: var(--s-xs);
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 .button-secondary-small{
@@ -155,6 +164,9 @@ p.small{
     padding: var(--s-xs);
     border: none;
     cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 /* main{
     max-width: var(--max-vw);
